@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GWENOMO | Guardianes hechos con amor</title>
+    <meta name="description" content="GWENOMO by Wen — gnomos artesanales hechos con amor, ideales para regalar, decorar y llenar el hogar de magia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Background layers -->
+    <canvas id="snow-canvas" aria-hidden="true"></canvas>
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="aurora aurora-c"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="topbar">
+      <div class="brand-mark">
+        <span class="brand-icon">🎄</span>
+        <span class="brand-name">GWENOMO</span>
+        <span class="brand-sub">by Wen</span>
+      </div>
+      <nav>
+        <a href="/catalogo.html">Catálogo</a>
+        <a href="#historia">Historia</a>
+        <a href="/personaliza.html">Personaliza</a>
+        <a href="#pedido">Pedidos</a>
+      </nav>
+      <a class="btn-wa-mini" href="https://wa.me/593996259465" target="_blank" rel="noreferrer" aria-label="Pedir por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Pedir
+      </a>
+    </header>
+
+    <main>
+      <!-- ═══════════════════════════════════
+           HERO
+      ═══════════════════════════════════ -->
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-up" style="--delay:0ms">Hechos en Ecuador · Hechos con amor</p>
+          <h1>
+            <span class="h1-line reveal-up" style="--delay:80ms">Guardianes</span>
+            <span class="h1-line h1-accent reveal-up" style="--delay:180ms"><em>de magia</em></span>
+            <span class="h1-line reveal-up" style="--delay:280ms">y alegría</span>
+          </h1>
+          <p class="lede reveal-up" style="--delay:380ms">
+            GWENOMO by Wen: una colección encantadora de gnomos artesanales creados para regalar, decorar y arrancar sonrisas. Cada pieza, única. Cada detalle, hecho con amor.
+          </p>
+          <div class="hero-actions reveal-up" style="--delay:480ms">
+            <a class="btn btn-primary" href="#personalizar">✨ Diseña el tuyo</a>
+            <a class="btn btn-ghost" href="#coleccion">Ver colección</a>
+          </div>
+          <ul class="trust-pills reveal-up" style="--delay:580ms">
+            <li><span>✨</span> Artesanales</li>
+            <li><span>🎁</span> Para regalar</li>
+            <li><span>🌿</span> Ecuador</li>
+            <li><span>🌈</span> Personalizables</li>
+          </ul>
+        </div>
+
+        <div class="hero-stage reveal-up" style="--delay:240ms">
+          <div class="stage-orb orb-gold"></div>
+          <div class="stage-orb orb-green"></div>
+          <div class="stage-orb orb-red"></div>
+
+          <div class="gnome-wrapper" id="heroGnome">
+            <!-- Main hero gnome illustration -->
+            <svg class="gnome-hero-svg" viewBox="0 0 160 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gnomo GWENOMO artesanal">
+              <!-- Hat (tall, festive) -->
+              <path d="M80 6 L42 138 L118 138 Z" fill="#c54b43"/>
+              <path d="M80 6 L42 138 L80 138 Z" fill="rgba(0,0,0,0.07)"/>
+              <!-- Hat texture lines -->
+              <path d="M67,56 Q80,50 93,56" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M63,76 Q80,69 97,76" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M59,96 Q80,88 101,96" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M55,116 Q80,107 105,116" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <!-- Hat highlight -->
+              <path d="M80 6 L64 70 L80 72 Z" fill="rgba(255,255,255,0.06)"/>
+              <!-- Hat band -->
+              <rect x="41" y="131" width="78" height="16" rx="6" fill="#d8ab49"/>
+              <text x="80" y="143" text-anchor="middle" font-size="11" fill="white" font-weight="bold" font-family="sans-serif">★</text>
+              <circle cx="55" cy="139" r="5.5" fill="#f0c060"/>
+              <circle cx="55" cy="139" r="2.5" fill="#c8941a"/>
+              <circle cx="105" cy="139" r="5.5" fill="#f0c060"/>
+              <circle cx="105" cy="139" r="2.5" fill="#c8941a"/>
+              <!-- Face -->
+              <circle cx="80" cy="163" r="29" fill="#f5c080"/>
+              <circle cx="80" cy="163" r="29" fill="url(#faceShade)" opacity="0.3"/>
+              <!-- Cheek blush -->
+              <ellipse cx="60" cy="170" rx="10" ry="7" fill="rgba(215,75,55,0.22)"/>
+              <ellipse cx="100" cy="170" rx="10" ry="7" fill="rgba(215,75,55,0.22)"/>
+              <!-- Eyes -->
+              <circle cx="70" cy="156" r="5" fill="#223128"/>
+              <circle cx="90" cy="156" r="5" fill="#223128"/>
+              <circle cx="71.8" cy="154" r="2" fill="white"/>
+              <circle cx="91.8" cy="154" r="2" fill="white"/>
+              <!-- Brows -->
+              <path d="M64,149 Q70,146 76,149" stroke="#5d3010" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M84,149 Q90,146 96,149" stroke="#5d3010" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- Big round nose -->
+              <ellipse cx="80" cy="167" rx="8" ry="9" fill="#e8906a"/>
+              <ellipse cx="77" cy="164" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.28)"/>
+              <!-- Smile -->
+              <path d="M69,177 Q80,187 91,177" stroke="#b05030" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+              <!-- Beard (big and fluffy) -->
+              <path d="M47,168 Q32,208 41,244 Q54,270 80,274 Q106,270 119,244 Q128,208 113,168 Z" fill="white"/>
+              <!-- Beard texture -->
+              <path d="M53,184 Q65,177 77,184" stroke="#ddd8cc" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <path d="M57,201 Q70,193 83,201" stroke="#ddd8cc" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <path d="M54,219 Q68,211 83,219" stroke="#ddd8cc" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <path d="M57,237 Q71,229 86,237" stroke="#ddd8cc" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <path d="M65,253 Q76,246 88,253" stroke="#ddd8cc" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <!-- Body/coat -->
+              <rect x="51" y="180" width="58" height="58" rx="14" fill="#2f6b41"/>
+              <rect x="51" y="180" width="29" height="58" rx="14" fill="rgba(0,0,0,0.06)"/>
+              <!-- Coat buttons -->
+              <circle cx="80" cy="193" r="3.5" fill="#d8ab49"/>
+              <circle cx="80" cy="207" r="3.5" fill="#d8ab49"/>
+              <circle cx="80" cy="221" r="3.5" fill="#d8ab49"/>
+              <!-- Belt -->
+              <rect x="50" y="220" width="60" height="11" rx="4" fill="#d8ab49"/>
+              <rect x="72" y="216" width="16" height="18" rx="4" fill="#d8ab49"/>
+              <rect x="74" y="218" width="12" height="14" rx="3" fill="#1e4a2b"/>
+              <rect x="77" y="221" width="6" height="8" rx="1.5" fill="#d8ab49"/>
+              <!-- Left arm (waving) -->
+              <g class="arm-wave" style="transform-origin:50px 196px">
+                <rect x="32" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+                <circle cx="42" cy="222" r="10" fill="#f5c080"/>
+                <path d="M36,218 Q42,225 48,218" stroke="rgba(0,0,0,0.08)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </g>
+              <!-- Right arm -->
+              <rect x="108" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+              <circle cx="118" cy="222" r="10" fill="#f5c080"/>
+              <!-- Feet/boots -->
+              <ellipse cx="69" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+              <ellipse cx="92" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+              <ellipse cx="64" cy="260" rx="9" ry="4" fill="rgba(255,255,255,0.12)"/>
+              <ellipse cx="87" cy="260" rx="9" ry="4" fill="rgba(255,255,255,0.12)"/>
+              <!-- Shadow -->
+              <ellipse cx="80" cy="275" rx="44" ry="6" fill="rgba(30,50,20,0.14)"/>
+              <!-- Defs -->
+              <defs>
+                <radialGradient id="faceShade" cx="60%" cy="40%">
+                  <stop offset="0%" stop-color="rgba(255,255,255,0.5)"/>
+                  <stop offset="100%" stop-color="rgba(180,90,20,0.3)"/>
+                </radialGradient>
+              </defs>
+            </svg>
+            <!-- Speech bubble -->
+            <div class="speech-bubble" id="speechBubble">
+              <span id="speechText">¡Hola! Soy un guardián de alegría ✨</span>
+            </div>
+          </div>
+
+          <!-- Floating image cards -->
+          <div class="float-card float-card-brand tilt-card">
+            <img src="/assets/logo.jpg" alt="GWENOMO by Wen logo" loading="lazy" />
+          </div>
+          <div class="float-card float-card-product tilt-card">
+            <img src="/assets/gnome-blackhat.jpg" alt="Gnomo artesanal sombrero negro" loading="lazy" />
+          </div>
+
+          <!-- Orbit badges -->
+          <div class="orbit-badge badge-artesanal">🧶 Artesanal</div>
+          <div class="orbit-badge badge-regalo">🎁 Ideal regalo</div>
+          <div class="orbit-badge badge-ecuador">🌿 Ecuador</div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           TICKER MARQUEE
+      ═══════════════════════════════════ -->
+      <div class="ticker-band" aria-hidden="true">
+        <div class="ticker-track">
+          <span>✨ Hechos con amor</span><span class="ticker-dot">·</span>
+          <span>🎄 Guardianes del hogar</span><span class="ticker-dot">·</span>
+          <span>🎁 Perfectos para regalar</span><span class="ticker-dot">·</span>
+          <span>🌿 Hechos en Ecuador</span><span class="ticker-dot">·</span>
+          <span>🌈 Múltiples colores y estilos</span><span class="ticker-dot">·</span>
+          <span>📦 Pedidos por WhatsApp</span><span class="ticker-dot">·</span>
+          <span>✨ Hechos con amor</span><span class="ticker-dot">·</span>
+          <span>🎄 Guardianes del hogar</span><span class="ticker-dot">·</span>
+          <span>🎁 Perfectos para regalar</span><span class="ticker-dot">·</span>
+          <span>🌿 Hechos en Ecuador</span><span class="ticker-dot">·</span>
+          <span>🌈 Múltiples colores y estilos</span><span class="ticker-dot">·</span>
+          <span>📦 Pedidos por WhatsApp</span><span class="ticker-dot">·</span>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════
+           HISTORIA
+      ═══════════════════════════════════ -->
+      <section class="story-section" id="historia">
+        <div class="story-text reveal parchment">
+          <p class="eyebrow">Nuestra esencia</p>
+          <h2>Más que decoración,<br><em>son guardianes</em></h2>
+          <p>
+            Cada Gwenomo nace en las manos de Wen, con cariño, hilo a hilo, detalle a detalle. No son solo gnomos: son pequeños personajes con vibra propia —tiernos, elegantes, juguetones— listos para acompañar momentos especiales.
+          </p>
+          <p>
+            Desde Ecuador, tejidos y pensados para que cada hogar tenga su propio guardián de alegría.
+          </p>
+          <a class="btn btn-primary" href="#pedido">Hacer un pedido →</a>
+        </div>
+        <div class="story-visual">
+          <article class="promo-card reveal tilt-card">
+            <img src="/assets/promo.jpg" alt="Colección GWENOMO gnomos navideños" loading="lazy" />
+          </article>
+          <div class="stat-chip reveal stat-chip-1">
+            <span class="stat-num" data-count="100">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Gnomos con amor</span>
+          </div>
+          <div class="stat-chip reveal stat-chip-2">
+            <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Clientes felices</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           COLECCIÓN
+      ═══════════════════════════════════ -->
+      <section class="collection-section" id="coleccion">
+        <div class="section-head reveal">
+          <p class="eyebrow">Colección destacada</p>
+          <h2>Encuentra tu Gwenomo</h2>
+          <p>Pensados para Navidad, regalos especiales y rincones con personalidad.</p>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card reveal tilt-card">
+            <div class="product-img-wrap">
+              <svg viewBox="0 0 100 140" class="product-gnome" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 4 L26 84 L74 84 Z" fill="#c54b43"/>
+                <rect x="25" y="78" width="50" height="11" rx="4" fill="#d8ab49"/>
+                <circle cx="50" cy="100" r="20" fill="#f5c080"/>
+                <ellipse cx="43" cy="95" rx="3.5" ry="3.5" fill="#223128"/>
+                <ellipse cx="57" cy="95" rx="3.5" ry="3.5" fill="#223128"/>
+                <circle cx="44.5" cy="93" r="1.4" fill="white"/>
+                <circle cx="58.5" cy="93" r="1.4" fill="white"/>
+                <ellipse cx="50" cy="103" rx="5.5" ry="6" fill="#e8906a"/>
+                <path d="M43,109 Q50,116 57,109" stroke="#b05030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M28,106 Q18,130 26,148 Q37,160 50,162 Q63,160 74,148 Q82,130 72,106 Z" fill="white"/>
+                <rect x="32" y="115" width="36" height="38" rx="9" fill="#2f6b41"/>
+                <circle cx="50" cy="124" r="2.5" fill="#d8ab49"/>
+                <circle cx="50" cy="134" r="2.5" fill="#d8ab49"/>
+                <ellipse cx="40" cy="159" rx="13" ry="8" fill="#1e2e22"/>
+                <ellipse cx="60" cy="159" rx="13" ry="8" fill="#1e2e22"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="tag">Clásico</span>
+              <h3>Guardián Festivo</h3>
+              <p>Colores navideños, detalle dorado y barba esponjosa. El clásico que nunca falla.</p>
+              <a class="btn-order" href="https://wa.me/593996259465?text=Hola%21%20Me%20interesa%20el%20Guardián%20Festivo%20🎄%20¿Tienen%20disponible%3F" target="_blank" rel="noreferrer">Pedir por WhatsApp →</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal tilt-card" style="--reveal-delay:100ms">
+            <div class="product-img-wrap product-img-bg2">
+              <svg viewBox="0 0 100 140" class="product-gnome" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 4 L26 84 L74 84 Z" fill="#3a6b9e"/>
+                <rect x="25" y="78" width="50" height="11" rx="4" fill="#f0c060"/>
+                <circle cx="50" cy="100" r="20" fill="#f5c080"/>
+                <ellipse cx="43" cy="95" rx="3.5" ry="3.5" fill="#223128"/>
+                <ellipse cx="57" cy="95" rx="3.5" ry="3.5" fill="#223128"/>
+                <circle cx="44.5" cy="93" r="1.4" fill="white"/>
+                <circle cx="58.5" cy="93" r="1.4" fill="white"/>
+                <ellipse cx="50" cy="103" rx="5.5" ry="6" fill="#e8906a"/>
+                <path d="M43,109 Q50,116 57,109" stroke="#b05030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M28,106 Q18,130 26,148 Q37,160 50,162 Q63,160 74,148 Q82,130 72,106 Z" fill="#c8c8c0"/>
+                <rect x="32" y="115" width="36" height="38" rx="9" fill="#3a6b9e"/>
+                <circle cx="50" cy="124" r="2.5" fill="#f0c060"/>
+                <circle cx="50" cy="134" r="2.5" fill="#f0c060"/>
+                <ellipse cx="40" cy="159" rx="13" ry="8" fill="#1e2e22"/>
+                <ellipse cx="60" cy="159" rx="13" ry="8" fill="#1e2e22"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="tag tag-blue">Personalidad</span>
+              <h3>Guardián Único</h3>
+              <p>Sombreros, barbas y combinaciones personalizadas para cada gusto y ocasión especial.</p>
+              <a class="btn-order" href="https://wa.me/593996259465?text=Hola%21%20Me%20interesa%20el%20Guardián%20Único%20✨%20¿Pueden%20personalizarlo%3F" target="_blank" rel="noreferrer">Pedir por WhatsApp →</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal tilt-card" style="--reveal-delay:200ms">
+            <div class="product-img-wrap product-img-bg3">
+              <svg viewBox="0 0 100 140" class="product-gnome" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 4 L26 84 L74 84 Z" fill="#7a4b9e"/>
+                <rect x="25" y="78" width="50" height="11" rx="4" fill="#f0c060"/>
+                <circle cx="50" cy="100" r="20" fill="#f5c080"/>
+                <ellipse cx="43" cy="95" rx="3.5" ry="3.5" fill="#223128"/>
+                <ellipse cx="57" cy="95" rx="3.5" ry="3.5" fill="#223128"/>
+                <circle cx="44.5" cy="93" r="1.4" fill="white"/>
+                <circle cx="58.5" cy="93" r="1.4" fill="white"/>
+                <ellipse cx="50" cy="103" rx="5.5" ry="6" fill="#e8906a"/>
+                <path d="M43,109 Q50,116 57,109" stroke="#b05030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M28,106 Q18,130 26,148 Q37,160 50,162 Q63,160 74,148 Q82,130 72,106 Z" fill="#f0e0c0"/>
+                <rect x="32" y="115" width="36" height="38" rx="9" fill="#7a4b9e"/>
+                <circle cx="50" cy="124" r="2.5" fill="#f0c060"/>
+                <circle cx="50" cy="134" r="2.5" fill="#f0c060"/>
+                <ellipse cx="40" cy="159" rx="13" ry="8" fill="#1e2e22"/>
+                <ellipse cx="60" cy="159" rx="13" ry="8" fill="#1e2e22"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="tag tag-purple">Regalo ideal</span>
+              <h3>Detalle con Encanto</h3>
+              <p>Un regalo diferente, hecho a mano y listo para arrancar la sonrisa más grande.</p>
+              <a class="btn-order" href="https://wa.me/593996259465?text=Hola%21%20Me%20interesa%20el%20Detalle%20con%20Encanto%20🎁%20¿Tienen%20disponible%3F" target="_blank" rel="noreferrer">Pedir por WhatsApp →</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           FORTUNE FLIP CARDS
+      ═══════════════════════════════════ -->
+      <section class="interactive-section reveal" id="energia">
+        <div class="section-head">
+          <p class="eyebrow">Un toque mágico</p>
+          <h2>Descubre tu Gwenomo</h2>
+          <p>Toca una carta y descubre qué guardián te acompaña.</p>
+        </div>
+        <div class="fortune-grid">
+
+          <div class="fortune-card" tabindex="0" role="button" aria-label="Voltear carta Protector">
+            <div class="fortune-card-inner">
+              <div class="fortune-front">
+                <span class="fortune-icon">✨</span>
+                <span class="fortune-name">Protector</span>
+                <span class="fortune-hint">Toca para revelar</span>
+              </div>
+              <div class="fortune-back">
+                <span class="fortune-back-icon">🛡️</span>
+                <p>Protección, alegría y buenas vibras para tu hogar. Tu espacio lo agradecerá.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fortune-card" tabindex="0" role="button" aria-label="Voltear carta Regalonero">
+            <div class="fortune-card-inner">
+              <div class="fortune-front">
+                <span class="fortune-icon">🎁</span>
+                <span class="fortune-name">Regalonero</span>
+                <span class="fortune-hint">Toca para revelar</span>
+              </div>
+              <div class="fortune-back">
+                <span class="fortune-back-icon">💝</span>
+                <p>Ideal para regalar a quien ama los detalles únicos y hechos con cariño de verdad.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fortune-card" tabindex="0" role="button" aria-label="Voltear carta Hogareño">
+            <div class="fortune-card-inner">
+              <div class="fortune-front">
+                <span class="fortune-icon">🏡</span>
+                <span class="fortune-name">Hogareño</span>
+                <span class="fortune-hint">Toca para revelar</span>
+              </div>
+              <div class="fortune-back">
+                <span class="fortune-back-icon">🌿</span>
+                <p>Perfecto para un rincón con color, calidez y mucha personalidad. El alma del hogar.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fortune-card" tabindex="0" role="button" aria-label="Voltear carta Navideño">
+            <div class="fortune-card-inner">
+              <div class="fortune-front">
+                <span class="fortune-icon">🎄</span>
+                <span class="fortune-name">Navideño</span>
+                <span class="fortune-hint">Toca para revelar</span>
+              </div>
+              <div class="fortune-back">
+                <span class="fortune-back-icon">⭐</span>
+                <p>Trae magia navideña y una sonrisa instantánea. Irremplazable en Diciembre.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           CUSTOMIZER
+      ═══════════════════════════════════ -->
+      <section class="customizer-section reveal" id="personalizar">
+        <div class="section-head">
+          <p class="eyebrow">Hazlo tuyo</p>
+          <h2>Diseña tu Gwenomo</h2>
+          <p>Elige los colores y estilos favoritos. Te enviamos el precio por WhatsApp.</p>
+        </div>
+
+        <div class="customizer-layout">
+          <!-- Live preview gnome -->
+          <div class="customizer-preview">
+            <div class="preview-stage">
+              <div class="preview-sparkle-ring" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <svg class="preview-gnome" id="previewGnome" viewBox="0 0 160 280" xmlns="http://www.w3.org/2000/svg" aria-label="Vista previa de tu Gwenomo personalizado">
+                <path id="pvHat" d="M80 6 L42 138 L118 138 Z" fill="#c54b43"/>
+                <path d="M80 6 L42 138 L80 138 Z" fill="rgba(0,0,0,0.07)"/>
+                <path d="M67,56 Q80,50 93,56" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                <path d="M63,76 Q80,69 97,76" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                <path d="M59,96 Q80,88 101,96" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                <path d="M55,116 Q80,107 105,116" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                <rect id="pvBand" x="41" y="131" width="78" height="16" rx="6" fill="#d8ab49"/>
+                <text x="80" y="143" text-anchor="middle" font-size="11" fill="white" font-weight="bold" font-family="sans-serif">★</text>
+                <circle cx="80" cy="163" r="29" fill="#f5c080"/>
+                <ellipse cx="60" cy="170" rx="10" ry="7" fill="rgba(215,75,55,0.22)"/>
+                <ellipse cx="100" cy="170" rx="10" ry="7" fill="rgba(215,75,55,0.22)"/>
+                <circle cx="70" cy="156" r="5" fill="#223128"/>
+                <circle cx="90" cy="156" r="5" fill="#223128"/>
+                <circle cx="71.8" cy="154" r="2" fill="white"/>
+                <circle cx="91.8" cy="154" r="2" fill="white"/>
+                <ellipse cx="80" cy="167" rx="8" ry="9" fill="#e8906a"/>
+                <path d="M69,177 Q80,187 91,177" stroke="#b05030" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+                <path id="pvBeard" d="M47,168 Q32,208 41,244 Q54,270 80,274 Q106,270 119,244 Q128,208 113,168 Z" fill="white"/>
+                <path d="M53,184 Q65,177 77,184" stroke="#ddd8cc" stroke-width="2" fill="none"/>
+                <path d="M57,201 Q70,193 83,201" stroke="#ddd8cc" stroke-width="2" fill="none"/>
+                <path d="M54,219 Q68,211 83,219" stroke="#ddd8cc" stroke-width="2" fill="none"/>
+                <rect id="pvCoat" x="51" y="180" width="58" height="58" rx="14" fill="#2f6b41"/>
+                <rect x="51" y="180" width="29" height="58" rx="14" fill="rgba(0,0,0,0.06)"/>
+                <circle cx="80" cy="193" r="3.5" fill="#d8ab49"/>
+                <circle cx="80" cy="207" r="3.5" fill="#d8ab49"/>
+                <circle cx="80" cy="221" r="3.5" fill="#d8ab49"/>
+                <rect id="pvBelt" x="50" y="220" width="60" height="11" rx="4" fill="#d8ab49"/>
+                <rect x="72" y="216" width="16" height="18" rx="4" fill="#d8ab49"/>
+                <rect x="74" y="218" width="12" height="14" rx="3" fill="#1e4a2b"/>
+                <rect id="pvArmL" x="32" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+                <circle cx="42" cy="222" r="10" fill="#f5c080"/>
+                <rect id="pvArmR" x="108" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+                <circle cx="118" cy="222" r="10" fill="#f5c080"/>
+                <ellipse cx="69" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+                <ellipse cx="92" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+                <ellipse cx="64" cy="260" rx="9" ry="4" fill="rgba(255,255,255,0.12)"/>
+                <ellipse cx="87" cy="260" rx="9" ry="4" fill="rgba(255,255,255,0.12)"/>
+                <ellipse cx="80" cy="275" rx="44" ry="6" fill="rgba(30,50,20,0.14)"/>
+              </svg>
+              <div class="preview-label" id="previewLabel">Tu Gwenomo personalizado ✨</div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="customizer-controls">
+
+            <div class="control-group">
+              <label class="control-label">🎩 Color del sombrero</label>
+              <div class="color-swatches" id="hatSwatches" role="group" aria-label="Color del sombrero">
+                <button class="swatch swatch-active" data-part="hat" data-color="#c54b43" data-name="Rojo navideño" style="background:#c54b43" title="Rojo navideño" aria-label="Rojo navideño" aria-pressed="true"></button>
+                <button class="swatch" data-part="hat" data-color="#2f6b41" data-name="Verde bosque" style="background:#2f6b41" title="Verde bosque" aria-label="Verde bosque" aria-pressed="false"></button>
+                <button class="swatch" data-part="hat" data-color="#3a6b9e" data-name="Azul cielo" style="background:#3a6b9e" title="Azul cielo" aria-label="Azul cielo" aria-pressed="false"></button>
+                <button class="swatch" data-part="hat" data-color="#7a4b9e" data-name="Morado mágico" style="background:#7a4b9e" title="Morado mágico" aria-label="Morado mágico" aria-pressed="false"></button>
+                <button class="swatch" data-part="hat" data-color="#d8ab49" data-name="Dorado festivo" style="background:#d8ab49" title="Dorado festivo" aria-label="Dorado festivo" aria-pressed="false"></button>
+                <button class="swatch" data-part="hat" data-color="#223128" data-name="Verde profundo" style="background:#223128" title="Verde profundo" aria-label="Verde profundo" aria-pressed="false"></button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">🧥 Color del cuerpo</label>
+              <div class="color-swatches" id="coatSwatches" role="group" aria-label="Color del cuerpo">
+                <button class="swatch swatch-active" data-part="coat" data-color="#2f6b41" data-name="Verde bosque" style="background:#2f6b41" title="Verde bosque" aria-label="Verde bosque" aria-pressed="true"></button>
+                <button class="swatch" data-part="coat" data-color="#c54b43" data-name="Rojo festivo" style="background:#c54b43" title="Rojo festivo" aria-label="Rojo festivo" aria-pressed="false"></button>
+                <button class="swatch" data-part="coat" data-color="#3a6b9e" data-name="Azul real" style="background:#3a6b9e" title="Azul real" aria-label="Azul real" aria-pressed="false"></button>
+                <button class="swatch" data-part="coat" data-color="#7a4b9e" data-name="Morado real" style="background:#7a4b9e" title="Morado real" aria-label="Morado real" aria-pressed="false"></button>
+                <button class="swatch" data-part="coat" data-color="#8B4513" data-name="Café cálido" style="background:#8B4513" title="Café cálido" aria-label="Café cálido" aria-pressed="false"></button>
+                <button class="swatch" data-part="coat" data-color="#1e4a2b" data-name="Verde oscuro" style="background:#1e4a2b" title="Verde oscuro" aria-label="Verde oscuro" aria-pressed="false"></button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">🧔 Color de la barba</label>
+              <div class="color-swatches" id="beardSwatches" role="group" aria-label="Color de la barba">
+                <button class="swatch swatch-active swatch-light" data-part="beard" data-color="#ffffff" data-name="Blanca clásica" style="background:#ffffff" title="Blanca clásica" aria-label="Blanca clásica" aria-pressed="true"></button>
+                <button class="swatch" data-part="beard" data-color="#c8b89a" data-name="Arena dorada" style="background:#c8b89a" title="Arena dorada" aria-label="Arena dorada" aria-pressed="false"></button>
+                <button class="swatch" data-part="beard" data-color="#8B6F47" data-name="Café" style="background:#8B6F47" title="Café" aria-label="Café" aria-pressed="false"></button>
+                <button class="swatch" data-part="beard" data-color="#909090" data-name="Gris plateado" style="background:#909090" title="Gris plateado" aria-label="Gris plateado" aria-pressed="false"></button>
+                <button class="swatch" data-part="beard" data-color="#d8ab49" data-name="Dorada" style="background:#d8ab49" title="Dorada" aria-label="Dorada" aria-pressed="false"></button>
+                <button class="swatch" data-part="beard" data-color="#f0c0d0" data-name="Rosa pastel" style="background:#f0c0d0" title="Rosa pastel" aria-label="Rosa pastel" aria-pressed="false"></button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="recipientName">📝 ¿Para quién es? (opcional)</label>
+              <input type="text" id="recipientName" class="name-input" placeholder="Ej: Para mamá, para mi oficina…" maxlength="60" autocomplete="off" />
+            </div>
+
+            <div class="order-summary" id="orderSummary">
+              <span class="order-tag" id="summaryHat">🎩 Rojo navideño</span>
+              <span class="order-tag" id="summaryCoat">🧥 Verde bosque</span>
+              <span class="order-tag" id="summaryBeard">🧔 Blanca clásica</span>
+            </div>
+
+            <button class="btn btn-whatsapp" id="orderBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Enviar pedido por WhatsApp
+            </button>
+            <p class="customizer-note">Te responderemos con el precio y disponibilidad 🧶</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           CTA FINAL
+      ═══════════════════════════════════ -->
+      <section class="cta-section reveal" id="pedido">
+        <div class="cta-inner parchment">
+          <div class="cta-copy">
+            <p class="eyebrow">¿Listo para encargar?</p>
+            <h2>Tu Gwenomo<br><em>te está esperando</em></h2>
+            <p>Escríbenos por WhatsApp y te ayudamos a elegir el guardián perfecto. Pedidos personalizados, envíos dentro de Ecuador y regalos con encanto.</p>
+            <a class="btn btn-whatsapp btn-whatsapp-big" href="https://wa.me/593996259465?text=Hola!%20Quiero%20información%20sobre%20los%20Gwenomos%20🎄" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Hablar por WhatsApp
+            </a>
+          </div>
+          <div class="cta-gnome-trio" aria-hidden="true">
+            <div class="trio-gnome trio-1">
+              <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg"><path d="M40 3 L20 72 L60 72 Z" fill="#c54b43"/><rect x="19" y="67" width="42" height="9" rx="3" fill="#d8ab49"/><circle cx="40" cy="84" r="16" fill="#f5c080"/><circle cx="35" cy="79" r="3" fill="#223128"/><circle cx="45" cy="79" r="3" fill="#223128"/><circle cx="36.4" cy="77" r="1.3" fill="white"/><circle cx="46.4" cy="77" r="1.3" fill="white"/><ellipse cx="40" cy="86" rx="5" ry="5.5" fill="#e8906a"/><path d="M34,91 Q40,97 46,91" stroke="#b05030" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M22,89 Q14,110 20,124 Q29,134 40,136 Q51,134 60,124 Q66,110 58,89 Z" fill="white"/><rect x="26" y="97" width="28" height="32" rx="8" fill="#2f6b41"/><ellipse cx="32" cy="131" rx="11" ry="7" fill="#1e2e22"/><ellipse cx="48" cy="131" rx="11" ry="7" fill="#1e2e22"/></svg>
+            </div>
+            <div class="trio-gnome trio-2">
+              <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg"><path d="M40 3 L20 72 L60 72 Z" fill="#2f6b41"/><rect x="19" y="67" width="42" height="9" rx="3" fill="#f0c060"/><circle cx="40" cy="84" r="16" fill="#f5c080"/><circle cx="35" cy="79" r="3" fill="#223128"/><circle cx="45" cy="79" r="3" fill="#223128"/><circle cx="36.4" cy="77" r="1.3" fill="white"/><circle cx="46.4" cy="77" r="1.3" fill="white"/><ellipse cx="40" cy="86" rx="5" ry="5.5" fill="#e8906a"/><path d="M34,91 Q40,97 46,91" stroke="#b05030" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M22,89 Q14,110 20,124 Q29,134 40,136 Q51,134 60,124 Q66,110 58,89 Z" fill="#c8b89a"/><rect x="26" y="97" width="28" height="32" rx="8" fill="#c54b43"/><ellipse cx="32" cy="131" rx="11" ry="7" fill="#1e2e22"/><ellipse cx="48" cy="131" rx="11" ry="7" fill="#1e2e22"/></svg>
+            </div>
+            <div class="trio-gnome trio-3">
+              <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg"><path d="M40 3 L20 72 L60 72 Z" fill="#7a4b9e"/><rect x="19" y="67" width="42" height="9" rx="3" fill="#f0c060"/><circle cx="40" cy="84" r="16" fill="#f5c080"/><circle cx="35" cy="79" r="3" fill="#223128"/><circle cx="45" cy="79" r="3" fill="#223128"/><circle cx="36.4" cy="77" r="1.3" fill="white"/><circle cx="46.4" cy="77" r="1.3" fill="white"/><ellipse cx="40" cy="86" rx="5" ry="5.5" fill="#e8906a"/><path d="M34,91 Q40,97 46,91" stroke="#b05030" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M22,89 Q14,110 20,124 Q29,134 40,136 Q51,134 60,124 Q66,110 58,89 Z" fill="#909090"/><rect x="26" y="97" width="28" height="32" rx="8" fill="#7a4b9e"/><ellipse cx="32" cy="131" rx="11" ry="7" fill="#1e2e22"/><ellipse cx="48" cy="131" rx="11" ry="7" fill="#1e2e22"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Peeking gnome -->
+    <div class="peeking-gnome" id="welcomeGnome" aria-hidden="true">
+      <img src="/assets/gnome-hello.jpg" alt="Gnomo saludando" loading="lazy" />
+      <div class="hello-toast">¡Hola! Bienvenido a GWENOMO ✨</div>
+    </div>
+
+    <footer class="footer">
+      <p class="footer-brand">GWENOMO <em>by Wen</em></p>
+      <p>Hecho con cariño, color y magia ✨ · Ecuador</p>
+      <p class="footer-links">
+        <a href="https://wa.me/593996259465" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+      </p>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

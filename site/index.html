@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GWENOMO | Guardianes hechos con amor</title>
+    <meta name="description" content="GWENOMO by Wen — gnomos artesanales hechos con amor, ideales para regalar, decorar y llenar el hogar de magia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <canvas id="snow-canvas" aria-hidden="true"></canvas>
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+    <div class="floating-icons" aria-hidden="true">
+      <span>✨</span><span>🎁</span><span>🎄</span><span>💫</span><span>🧵</span>
+    </div>
+
+    <header class="topbar">
+      <div class="brand-mark">🎄 GWENOMO</div>
+      <div class="topbar-controls">
+        <nav>
+          <a href="/catalogo.html" data-i18n="nav.collection">Colección</a>
+          <a href="/personaliza.html" data-i18n="nav.customize">Personaliza</a>
+          <a href="#como-pedir" data-i18n="nav.how">Cómo pedir</a>
+          <a href="#pedido" data-i18n="nav.orders">Pedidos</a>
+        </nav>
+        <div class="lang-toggle" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="es" type="button">ES</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Hechos en Ecuador · Hechos con amor</p>
+          <h1>
+            <span data-i18n="hero.titlePrefix">Los gnomos que llenan tu hogar de</span>
+            <span data-i18n="hero.titleAccent">magia, color y personalidad</span>
+          </h1>
+          <p class="lede" data-i18n="hero.lede">Bienvenido a GWENOMO by Wen: una colección encantadora de gnomos artesanales creados para regalar, decorar y arrancar sonrisas desde el primer vistazo.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pedido" data-i18n="hero.ctaPrimary">Haz tu pedido</a>
+            <a class="btn btn-ghost" href="/catalogo.html" data-i18n="hero.ctaSecondary">Ver la colección</a>
+          </div>
+          <ul class="trust-row">
+            <li data-i18n="hero.trust1">✨ Artesanales</li>
+            <li data-i18n="hero.trust2">🎁 Perfectos para regalar</li>
+            <li data-i18n="hero.trust3">🌈 Varios colores y estilos</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="guardian-stage tilt-card" id="heroGuardian">
+            <div class="speech-bubble" id="speechBubble">¡Hola! Soy un pequeño guardián de alegría.</div>
+            <div class="logo-card"><img src="/assets/logo.jpg" alt="Logo GWENOMO by Wen" /></div>
+            <div class="floating-card card-a"><img src="/assets/gnome-blackhat.jpg" alt="Gnomo artesanal con barba roja y sombrero negro" /></div>
+            <div class="floating-badge" data-i18n="hero.badge">Guardianes de la Navidad</div>
+            <button class="mini-magic-btn" id="magicButton" type="button" data-i18n="hero.magicBtn">✨ Tócame</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="magic-band reveal section-divider"><div><strong data-i18n="band.strong">Una marca con alma:</strong> <span data-i18n="band.text">pequeños guardianes decorativos para espacios felices, regalos memorables y temporadas llenas de encanto.</span></div></section>
+
+      <section class="signature-spotlight section-divider reveal">
+        <div class="signature-copy parchment">
+          <p class="eyebrow" data-i18n="signature.eyebrow">Favorito clásico</p>
+          <h2 data-i18n="signature.title">El Gwenomo rojo que roba miradas</h2>
+          <p data-i18n="signature.text">Un estilo clásico, navideño y acogedor que se siente como un abrazo hecho a mano. Perfecto para centros de mesa, repisas o regalos que quieren dejar huella.</p>
+          <div class="signature-note">
+            <img src="/assets/ctrl-z-heart.jpg" alt="Corazón rosa con Ctrl Z" />
+            <p data-i18n="signature.note">Hecho con creatividad, paciencia y mucho corazón.</p>
+          </div>
+        </div>
+        <article class="signature-image tilt-card product-modal-trigger" data-product="clasico-rojo"><img src="/assets/classic-red-gnome.jpg" alt="Gnomo clásico rojo con barba blanca" /></article>
+      </section>
+
+      <section class="collection section-divider" id="coleccion">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="collection.eyebrow">Colección destacada</p>
+          <h2 data-i18n="collection.title">Elige el Gwenomo con tu estilo</h2>
+          <p data-i18n="collection.text">Pensados para Navidad, regalos especiales y rincones con personalidad.</p>
+        </div>
+        <div class="product-grid product-grid-rich">
+          <article class="product-card photo-card reveal tilt-card mood-card product-modal-trigger" data-mood="Místico" data-product="colores-pareja"><img src="/assets/color-pairs.jpg" alt="Gnomos en colores morado y azul" /><div class="product-copy"><span class="tag" data-i18n="collection.card1.tag">Colores</span><h3 data-i18n="collection.card1.title">Combina tonos y personalidad</h3><p data-i18n="collection.card1.text">Versiones en distintos colores para que cada Gwenomo se vea único y combine con tu espacio o regalo.</p></div></article>
+          <article class="product-card photo-card reveal tilt-card mood-card product-modal-trigger" data-mood="Creativo" data-product="profesiones"><img src="/assets/custom-professions.jpg" alt="Gnomo personalizado con profesión" /><div class="product-copy"><span class="tag" data-i18n="collection.card2.tag">Personalización</span><h3 data-i18n="collection.card2.title">Tu profesión, tu historia</h3><p data-i18n="collection.card2.text">Chef, doctora, artista, técnico, lector o lo que imagines: se puede personalizar para hacerlo aún más especial.</p></div></article>
+          <article class="product-card reveal tilt-card mood-card product-modal-trigger" data-mood="Regalón" data-product="stpat"><span class="tag" data-i18n="collection.card3.tag">Regalo ideal</span><h3 data-i18n="collection.card3.title">Detalles con encanto</h3><p data-i18n="collection.card3.text">Un regalo diferente, hecho a mano y listo para sacar una sonrisa desde que se entrega.</p></article>
+        </div>
+        <div class="section-cta-row reveal">
+          <a class="btn btn-ghost" href="/catalogo.html">Ver catálogo completo</a>
+          <a class="btn btn-ghost" href="/personaliza.html">Explorar personalización</a>
+        </div>
+      </section>
+
+      <section class="seasonal-showcase section-divider reveal">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="seasonal.eyebrow">Ediciones creativas</p>
+          <h2 data-i18n="seasonal.title">Gwenomos para fechas especiales</h2>
+          <p data-i18n="seasonal.text">La magia no se queda en una sola temporada. También puede vestirse de verde, suerte y celebración.</p>
+        </div>
+        <div class="seasonal-grid">
+          <article class="seasonal-card tilt-card product-modal-trigger" data-product="stpat"><img src="/assets/stpat-spanish.jpg" alt="Gnomo de San Patricio en español" /><div class="seasonal-copy"><span class="tag" data-i18n="seasonal.card1.tag">Español</span><h3 data-i18n="seasonal.card1.title">San Patricio con suerte</h3></div></article>
+          <article class="seasonal-card tilt-card product-modal-trigger" data-product="stpat"><img src="/assets/stpat-english.jpg" alt="Gnomo de San Patricio en inglés" /><div class="seasonal-copy"><span class="tag" data-i18n="seasonal.card2.tag">English</span><h3 data-i18n="seasonal.card2.title">Lucky seasonal version</h3></div></article>
+        </div>
+      </section>
+
+      <section class="new-arrivals section-divider reveal" id="nuevos">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="arrivals.eyebrow">Nuevos modelos</p>
+          <h2 data-i18n="arrivals.title">Más Gwenomos para enamorarte</h2>
+          <p data-i18n="arrivals.text">Acabamos de sumar nuevas piezas sentadas, coloridas y llenas de ternura para regalos, colección o decoración navideña.</p>
+        </div>
+        <div class="arrivals-grid">
+          <article class="arrival-card tilt-card"><img src="/assets/pink-christmas-sitting-gnome-snowflake-hat-dangling-legs.jpg" alt="Gnomo navideño rosado sentado con sombrero de copos" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card1.tag">Rosado</span><h3 data-i18n="arrivals.card1.title">Dulce y soñador</h3><p data-i18n="arrivals.card1.text">Un Gwenomo suave, tierno y delicado para espacios acogedores o regalos llenos de cariño.</p></div></article>
+          <article class="arrival-card tilt-card"><img src="/assets/red-christmas-sitting-gnome-gray-legs-bell-shoes.jpg" alt="Gnomo navideño rojo sentado con campanitas" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card2.tag">Clásico rojo</span><h3 data-i18n="arrivals.card2.title">El espíritu navideño</h3><p data-i18n="arrivals.card2.text">Un estilo festivo y tradicional con campanitas y detalles que se sienten cálidos desde el primer vistazo.</p></div></article>
+          <article class="arrival-card tilt-card"><img src="/assets/blue-winter-sitting-gnome-white-heart-ornament-bell-hat.jpg" alt="Gnomo azul de invierno con corazón blanco" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card3.tag">Azul invierno</span><h3 data-i18n="arrivals.card3.title">Con corazón en mano</h3><p data-i18n="arrivals.card3.text">Ideal para regalar con intención, con una vibra serena y un detalle de corazón que roba miradas.</p></div></article>
+          <article class="arrival-card tilt-card"><img src="/assets/purple-christmas-sitting-gnome-gray-slippers-white-legs.jpg" alt="Gnomo morado sentado con pantuflas suaves" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card4.tag">Morado</span><h3 data-i18n="arrivals.card4.title">Encanto con personalidad</h3><p data-i18n="arrivals.card4.text">Color, textura y ternura en una pieza que se siente original, alegre y perfecta para destacar.</p></div></article>
+          <article class="arrival-card tilt-card"><img src="/assets/green-musician-christmas-gnome-guitar-sitting-rock.jpg" alt="Gnomo músico verde con guitarra" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card5.tag">Músico</span><h3 data-i18n="arrivals.card5.title">Serenata navideña</h3><p data-i18n="arrivals.card5.text">Una versión creativa y encantadora para amantes de la música, los detalles y los regalos con historia.</p></div></article>
+        </div>
+      </section>
+
+      <section class="customization section-divider" id="personaliza">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="custom.eyebrow">Personaliza tu Gwenomo</p>
+          <h2 data-i18n="custom.title">Hazlo tan especial como la persona que lo recibe</h2>
+          <p data-i18n="custom.text">Colores, profesiones, detalles y combinaciones para crear una pieza con mucha intención.</p>
+        </div>
+        <div class="custom-grid">
+          <article class="feature-panel parchment reveal"><h3 data-i18n="custom.panelTitle">Opciones que ya vemos claras</h3><ul class="feature-list"><li data-i18n="custom.li1">🎨 Colores diferentes para sombrero, manos y detalles</li><li data-i18n="custom.li2">🩺 Profesiones u oficios personalizados</li><li data-i18n="custom.li3">🎁 Diseños pensados para regalo</li><li data-i18n="custom.li4">✨ Estilos tiernos, elegantes o festivos</li></ul></article>
+          <article class="feature-image reveal tilt-card product-modal-trigger" data-product="profesiones"><img src="/assets/custom-professions.jpg" alt="Personalización de gnomos por profesión" /></article>
+          <article class="feature-image reveal tilt-card product-modal-trigger" data-product="colores-pareja"><img src="/assets/color-pairs.jpg" alt="Variedad de colores en gnomos decorativos" /></article>
+        </div>
+      </section>
+
+      <section class="interactive section-divider reveal"><div class="section-head"><p class="eyebrow" data-i18n="interactive.eyebrow">Un toque interactivo</p><h2 data-i18n="interactive.title">Descubre la energía de tu Gwenomo</h2><p data-i18n="interactive.text">Toca una carta y mira qué personalidad aparece.</p></div><div class="fortune-grid" id="fortuneGrid"><button class="fortune-card" data-fortune-es="Protección, alegría y buenas vibras para tu hogar." data-fortune-en="Protection, joy, and good vibes for your home.">✨ <span data-i18n="interactive.card1">Protector</span></button><button class="fortune-card" data-fortune-es="Ideal para regalar a alguien que ama los detalles únicos." data-fortune-en="Perfect for gifting someone who loves unique details.">🎁 <span data-i18n="interactive.card2">Regalonero</span></button><button class="fortune-card" data-fortune-es="Perfecto para un rincón con color, calidez y mucha personalidad." data-fortune-en="Perfect for a corner full of color, warmth, and personality.">🏡 <span data-i18n="interactive.card3">Hogareño</span></button><button class="fortune-card" data-fortune-es="Trae magia navideña y una sonrisa instantánea." data-fortune-en="Brings Christmas magic and an instant smile.">🎄 <span data-i18n="interactive.card4">Navideño</span></button></div><div class="fortune-output" id="fortuneOutput" data-i18n="interactive.output">Haz clic en una carta para revelar su magia.</div></section>
+
+      <section class="play-lab section-divider reveal"><div class="section-head"><p class="eyebrow" data-i18n="play.eyebrow">Zona divertida</p><h2 data-i18n="play.title">¿Qué tipo de Gwenomo eres hoy?</h2><p data-i18n="play.text">Pasa el mouse sobre una carta y deja que te responda con su vibra.</p></div><div class="mood-grid"><button class="mood-pill" data-message-es="Hoy toca un Gwenomo dulce, abrazable y perfecto para regalo." data-message-en="Today calls for a sweet, huggable Gwenomo that is perfect for gifting.">💝 <span data-i18n="play.pill1">Tierno</span></button><button class="mood-pill" data-message-es="Hoy manda un Gwenomo elegante, con presencia y estilo propio." data-message-en="Today it is all about an elegant Gwenomo with presence and style.">👑 <span data-i18n="play.pill2">Elegante</span></button><button class="mood-pill" data-message-es="Hoy gana un Gwenomo alegre, colorido y lleno de chispa." data-message-en="Today the winner is a playful, colorful Gwenomo full of sparkle.">🎉 <span data-i18n="play.pill3">Juguetón</span></button><button class="mood-pill" data-message-es="Hoy pide un Gwenomo personalizado con historia y profesión." data-message-en="Today calls for a personalized Gwenomo with a story and a profession.">🛠️ <span data-i18n="play.pill4">Personalizado</span></button></div><div class="mood-display" id="moodDisplay" data-i18n="play.output">Elige una vibra para ver qué Gwenomo te acompaña hoy.</div></section>
+
+      <section class="order-steps section-divider reveal" id="como-pedir"><div class="section-head"><p class="eyebrow" data-i18n="steps.eyebrow">Cómo pedir</p><h2 data-i18n="steps.title">Un proceso simple, rápido y bonito</h2><p data-i18n="steps.text">No queremos complicarlo: la magia está en elegir, personalizar y encargar.</p></div><div class="steps-grid"><article class="step-card tilt-card"><span class="step-number">1</span><h3 data-i18n="steps.card1.title">Elige tu estilo</h3><p data-i18n="steps.card1.text">Escoge colores, vibra y tipo de Gwenomo que más te guste.</p></article><article class="step-card tilt-card"><span class="step-number">2</span><h3 data-i18n="steps.card2.title">Cuéntanos los detalles</h3><p data-i18n="steps.card2.text">Comparte profesión, colores, ocasión especial o idea personalizada.</p></article><article class="step-card tilt-card"><span class="step-number">3</span><h3 data-i18n="steps.card3.title">Confirma por WhatsApp</h3><p data-i18n="steps.card3.text">Hablamos directo, resolvemos dudas y dejamos el pedido encaminado.</p></article></div></section>
+
+      <section class="cta reveal" id="pedido"><div class="cta-copy"><p class="eyebrow" data-i18n="cta.eyebrow">Pedidos</p><h2 data-i18n="cta.title">¿Listo para encargar el tuyo?</h2><p data-i18n="cta.text">Si ya viste tu estilo ideal, el siguiente paso es escribir por WhatsApp y contarnos qué Gwenomo quieres crear.</p></div><div class="cta-card parchment"><p><strong data-i18n="cta.listTitle">Ideas perfectas para pedir hoy:</strong></p><ul><li data-i18n="cta.li1">Un regalo personalizado</li><li data-i18n="cta.li2">Un Gwenomo con profesión u oficio</li><li data-i18n="cta.li3">Una combinación de colores especial</li><li data-i18n="cta.li4">Una decoración con más magia y ternura</li></ul><a class="btn btn-primary" href="https://wa.me/593996259465" target="_blank" rel="noreferrer" data-i18n="cta.button">Hablar por WhatsApp</a></div></section>
+
+      <section class="final-spell reveal"><div class="final-spell-card parchment"><p class="eyebrow" data-i18n="final.eyebrow">Un último toque</p><h2 data-i18n="final.title">Hecho para sorprender, regalar y enamorar</h2><p data-i18n="final.text">GWENOMO no busca ser una decoración cualquiera. Busca sacar una sonrisa, contar una historia y dejar una pequeña chispa de magia en cada espacio.</p><a class="btn btn-primary" href="https://wa.me/593996259465" target="_blank" rel="noreferrer" data-i18n="final.button">Quiero mi Gwenomo ✨</a></div></section>
+    </main>
+
+    <div class="product-modal" id="productModal" hidden>
+      <div class="product-modal-backdrop" data-close-modal></div>
+      <div class="product-modal-card">
+        <button class="product-modal-close" type="button" data-close-modal>×</button>
+        <img id="modalImage" src="" alt="" />
+        <div class="product-modal-copy">
+          <span class="tag" id="modalTag"></span>
+          <h3 id="modalTitle"></h3>
+          <p id="modalText"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="peeking-gnome" id="welcomeGnome" aria-hidden="true"><img src="/assets/gnome-hello.jpg" alt="Gnomo saludando" /><div class="hello-toast" data-i18n="hello.toast">¡Hola! Bienvenido a GWENOMO</div></div>
+    <footer class="footer"><p data-i18n="footer.text">GWENOMO by Wen · Hecho con cariño, color y magia ✨</p></footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

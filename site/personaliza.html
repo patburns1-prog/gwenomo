@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GWENOMO | Personaliza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="page-shell">
+      <header class="topbar topbar-static">
+        <div class="brand-mark">🎄 GWENOMO</div>
+        <div class="topbar-controls">
+          <nav>
+            <a href="/" data-i18n-page="nav.home">Inicio</a>
+            <a href="/catalogo.html" data-i18n-page="nav.catalog">Catálogo</a>
+            <a href="/personaliza.html" data-i18n-page="nav.customize">Personaliza</a>
+          </nav>
+          <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="es" type="button">ES</button>
+            <button class="lang-btn" data-lang="en" type="button">EN</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="inner-page">
+        <section class="section-head page-intro reveal visible">
+          <p class="eyebrow" data-i18n-page="custom.eyebrow">Personalización</p>
+          <h1 data-i18n-page="custom.title">Crea un Gwenomo único</h1>
+          <p data-i18n-page="custom.text">Este espacio ordena las ideas de personalización para que Wendy y sus clientes puedan pensar el pedido con más claridad.</p>
+        </section>
+
+        <section class="customizer-panel reveal visible">
+          <div class="customizer-preview-card">
+            <svg class="preview-gnome" id="previewGnome" viewBox="0 0 160 280" xmlns="http://www.w3.org/2000/svg" aria-label="Vista previa de tu Gwenomo personalizado">
+              <path id="pvHat" d="M80 6 L42 138 L118 138 Z" fill="#c54b43"/>
+              <path d="M80 6 L42 138 L80 138 Z" fill="rgba(0,0,0,0.07)"/>
+              <rect id="pvBand" x="41" y="131" width="78" height="16" rx="6" fill="#d8ab49"/>
+              <circle cx="80" cy="163" r="29" fill="#f5c080"/>
+              <circle cx="70" cy="156" r="5" fill="#223128"/>
+              <circle cx="90" cy="156" r="5" fill="#223128"/>
+              <ellipse cx="80" cy="167" rx="8" ry="9" fill="#e8906a"/>
+              <path d="M69,177 Q80,187 91,177" stroke="#b05030" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+              <path id="pvBeard" d="M47,168 Q32,208 41,244 Q54,270 80,274 Q106,270 119,244 Q128,208 113,168 Z" fill="white"/>
+              <rect id="pvCoat" x="51" y="180" width="58" height="58" rx="14" fill="#2f6b41"/>
+              <rect id="pvArmL" x="32" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+              <rect id="pvArmR" x="108" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+              <rect id="pvBelt" x="50" y="220" width="60" height="11" rx="4" fill="#d8ab49"/>
+              <ellipse cx="69" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+              <ellipse cx="92" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+            </svg>
+            <div class="preview-label" id="previewLabel" data-i18n-page="custom.preview">Tu Gwenomo personalizado ✨</div>
+          </div>
+
+          <div class="customizer-controls-box">
+            <div class="control-group">
+              <label class="control-label" data-i18n-page="custom.hat">🎩 Sombrero</label>
+              <div class="color-swatches">
+                <button class="swatch swatch-active" data-part="hat" data-color="#c54b43" data-name-es="Rojo navideño" data-name-en="Christmas red" style="background:#c54b43"></button>
+                <button class="swatch" data-part="hat" data-color="#2f6b41" data-name-es="Verde bosque" data-name-en="Forest green" style="background:#2f6b41"></button>
+                <button class="swatch" data-part="hat" data-color="#3a6b9e" data-name-es="Azul cielo" data-name-en="Sky blue" style="background:#3a6b9e"></button>
+                <button class="swatch" data-part="hat" data-color="#7a4b9e" data-name-es="Morado mágico" data-name-en="Magic purple" style="background:#7a4b9e"></button>
+                <button class="swatch" data-part="hat" data-color="#d8ab49" data-name-es="Dorado festivo" data-name-en="Festive gold" style="background:#d8ab49"></button>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" data-i18n-page="custom.coat">🧥 Cuerpo</label>
+              <div class="color-swatches">
+                <button class="swatch swatch-active" data-part="coat" data-color="#2f6b41" data-name-es="Verde bosque" data-name-en="Forest green" style="background:#2f6b41"></button>
+                <button class="swatch" data-part="coat" data-color="#c54b43" data-name-es="Rojo festivo" data-name-en="Festive red" style="background:#c54b43"></button>
+                <button class="swatch" data-part="coat" data-color="#3a6b9e" data-name-es="Azul real" data-name-en="Royal blue" style="background:#3a6b9e"></button>
+                <button class="swatch" data-part="coat" data-color="#7a4b9e" data-name-es="Morado real" data-name-en="Royal purple" style="background:#7a4b9e"></button>
+                <button class="swatch" data-part="coat" data-color="#8B4513" data-name-es="Café cálido" data-name-en="Warm brown" style="background:#8B4513"></button>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" data-i18n-page="custom.beard">🧔 Barba</label>
+              <div class="color-swatches">
+                <button class="swatch swatch-active" data-part="beard" data-color="#ffffff" data-name-es="Blanca clásica" data-name-en="Classic white" style="background:#ffffff;border:1px solid #ddd"></button>
+                <button class="swatch" data-part="beard" data-color="#c8b89a" data-name-es="Arena dorada" data-name-en="Golden sand" style="background:#c8b89a"></button>
+                <button class="swatch" data-part="beard" data-color="#8B6F47" data-name-es="Café" data-name-en="Brown" style="background:#8B6F47"></button>
+                <button class="swatch" data-part="beard" data-color="#909090" data-name-es="Gris plateado" data-name-en="Silver gray" style="background:#909090"></button>
+                <button class="swatch" data-part="beard" data-color="#f0c0d0" data-name-es="Rosa pastel" data-name-en="Pastel pink" style="background:#f0c0d0"></button>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="recipientName" data-i18n-page="custom.forWho">📝 ¿Para quién es?</label>
+              <input id="recipientName" class="name-input" type="text" placeholder="Ej: para mamá, para mi oficina..." maxlength="60" />
+            </div>
+            <div class="order-summary" id="orderSummary">
+              <span class="order-tag" id="summaryHat">🎩 Rojo navideño</span>
+              <span class="order-tag" id="summaryCoat">🧥 Verde bosque</span>
+              <span class="order-tag" id="summaryBeard">🧔 Blanca clásica</span>
+            </div>
+            <button class="btn btn-primary btn-full" id="orderBtn" type="button" data-i18n-page="custom.orderBtn">Enviar pedido por WhatsApp</button>
+          </div>
+        </section>
+
+        <section class="custom-grid custom-grid-page">
+          <article class="feature-panel parchment">
+            <h3 data-i18n-page="custom.panelTitle">Lo que puedes personalizar</h3>
+            <ul class="feature-list">
+              <li data-i18n-page="custom.li1">🎨 Paleta de colores</li>
+              <li data-i18n-page="custom.li2">🧑‍🍳 Profesión u oficio</li>
+              <li data-i18n-page="custom.li3">🎁 Motivo del regalo</li>
+              <li data-i18n-page="custom.li4">🍀 Temporada o fecha especial</li>
+              <li data-i18n-page="custom.li5">✨ Estilo: tierno, elegante, divertido</li>
+            </ul>
+          </article>
+          <article class="feature-image tilt-card">
+            <img src="/assets/custom-professions.jpg" alt="Gnomos personalizados por profesión" />
+          </article>
+          <article class="feature-image tilt-card">
+            <img src="/assets/color-pairs.jpg" alt="Variantes de color" />
+          </article>
+        </section>
+      </main>
+
+      <script type="module" src="/main.js"></script>
+    </div>
+  </body>
+</html>

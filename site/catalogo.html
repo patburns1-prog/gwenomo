@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GWENOMO | Catálogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="page-shell">
+      <header class="topbar topbar-static">
+        <div class="brand-mark">🎄 GWENOMO</div>
+        <div class="topbar-controls">
+          <nav>
+            <a href="/" data-i18n-page="nav.home">Inicio</a>
+            <a href="/catalogo.html" data-i18n-page="nav.catalog">Catálogo</a>
+            <a href="/personaliza.html" data-i18n-page="nav.customize">Personaliza</a>
+          </nav>
+          <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="es" type="button">ES</button>
+            <button class="lang-btn" data-lang="en" type="button">EN</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="inner-page">
+        <section class="section-head page-intro reveal visible">
+          <p class="eyebrow" data-i18n-page="catalog.eyebrow">Catálogo</p>
+          <h1 data-i18n-page="catalog.title">Nuestros Gwenomos</h1>
+          <p data-i18n-page="catalog.text">Una selección de estilos, colores, personalizaciones y ediciones creativas para inspirar el siguiente pedido.</p>
+        </section>
+
+        <div class="filter-bar reveal visible">
+          <button class="filter-btn filter-active" data-filter="all" data-i18n-page="filter.all">✨ Todos</button>
+          <button class="filter-btn" data-filter="clasico" data-i18n-page="filter.classic">🎄 Clásicos</button>
+          <button class="filter-btn" data-filter="color" data-i18n-page="filter.colors">🌈 Colores</button>
+          <button class="filter-btn" data-filter="especial" data-i18n-page="filter.special">⭐ Especiales</button>
+          <button class="filter-btn" data-filter="personalizado" data-i18n-page="filter.custom">🎨 Personalizados</button>
+        </div>
+
+        <section class="catalog-grid catalog-grid-advanced" id="catalogGrid">
+          <article class="catalog-card product-modal-trigger" data-category="clasico" data-product="clasico-rojo">
+            <img src="/assets/classic-red-gnome.jpg" alt="Gnomo clásico rojo" />
+            <div class="catalog-copy">
+              <span class="tag" data-i18n-page="card.classic">Clásico</span>
+              <h3 data-i18n-page="card.red.title">Gwenomo rojo</h3>
+              <p data-i18n-page="card.red.text">El favorito tradicional, cálido y navideño.</p>
+              <a class="btn-order-sm" href="https://wa.me/593996259465?text=Hola!%20Me%20interesa%20el%20Gwenomo%20rojo%20🎄" target="_blank" rel="noreferrer" data-i18n-page="order.link">Pedir →</a>
+            </div>
+          </article>
+          <article class="catalog-card product-modal-trigger" data-category="color" data-product="colores-pareja">
+            <img src="/assets/color-pairs.jpg" alt="Gnomos de colores" />
+            <div class="catalog-copy">
+              <span class="tag" data-i18n-page="card.colors">Colores</span>
+              <h3 data-i18n-page="card.colors.title">Parejas coloridas</h3>
+              <p data-i18n-page="card.colors.text">Versiones vivas para rincones con personalidad.</p>
+              <a class="btn-order-sm" href="https://wa.me/593996259465?text=Hola!%20Me%20interesan%20los%20Gwenomos%20de%20colores%20🌈" target="_blank" rel="noreferrer" data-i18n-page="order.link">Pedir →</a>
+            </div>
+          </article>
+          <article class="catalog-card product-modal-trigger" data-category="personalizado" data-product="profesiones">
+            <img src="/assets/custom-professions.jpg" alt="Gnomos por profesión" />
+            <div class="catalog-copy">
+              <span class="tag" data-i18n-page="card.custom">Personalización</span>
+              <h3 data-i18n-page="card.job.title">Profesiones</h3>
+              <p data-i18n-page="card.job.text">Diseños hechos para contar una historia personal.</p>
+              <a class="btn-order-sm" href="https://wa.me/593996259465?text=Hola!%20Quiero%20un%20Gwenomo%20por%20profesi%C3%B3n%20🎨" target="_blank" rel="noreferrer" data-i18n-page="order.link">Pedir →</a>
+            </div>
+          </article>
+          <article class="catalog-card product-modal-trigger" data-category="especial" data-product="stpat">
+            <img src="/assets/stpat-spanish.jpg" alt="Edición San Patricio" />
+            <div class="catalog-copy">
+              <span class="tag" data-i18n-page="card.special">Edición especial</span>
+              <h3 data-i18n-page="card.stpat.title">San Patricio</h3>
+              <p data-i18n-page="card.stpat.text">Una versión festiva para temporadas especiales.</p>
+              <a class="btn-order-sm" href="https://wa.me/593996259465?text=Hola!%20Me%20interesa%20la%20edici%C3%B3n%20San%20Patricio%20🍀" target="_blank" rel="noreferrer" data-i18n-page="order.link">Pedir →</a>
+            </div>
+          </article>
+        </section>
+
+        <div class="filter-empty" id="filterEmpty" hidden>
+          <p data-i18n-page="filter.empty">No hay Gwenomos en esa categoría todavía. Pero podemos hacerlo personalizado ✨</p>
+          <a class="btn btn-primary" href="/personaliza.html" data-i18n-page="filter.emptyCta">Ir a personalización</a>
+        </div>
+      </main>
+
+      <div class="product-modal" id="productModal" hidden>
+        <div class="product-modal-backdrop" data-close-modal></div>
+        <div class="product-modal-card">
+          <button class="product-modal-close" type="button" data-close-modal>×</button>
+          <img id="modalImage" src="" alt="" />
+          <div class="product-modal-copy">
+            <span class="tag" id="modalTag"></span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+          </div>
+        </div>
+      </div>
+
+      <script type="module" src="/main.js"></script>
+    </div>
+  </body>
+</html>

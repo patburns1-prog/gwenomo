@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GWENOMO | Personaliza tu Gnomo</title>
+    <meta name="description" content="Personaliza tu Gwenomo — elige colores, profesión, estilo y mensaje. Pedidos por WhatsApp." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="inner-body">
+
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="topbar">
+      <a href="/" class="brand-mark" style="text-decoration:none">
+        <span class="brand-icon">🎄</span>
+        <span class="brand-name">GWENOMO</span>
+        <span class="brand-sub">by Wen</span>
+      </a>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/catalogo.html">Catálogo</a>
+        <a href="/personaliza.html" class="nav-active">Personaliza</a>
+        <a href="/#pedido">Pedidos</a>
+      </nav>
+      <a class="btn-wa-mini" href="https://wa.me/593996259465" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Pedir
+      </a>
+    </header>
+
+    <main class="inner-main">
+
+      <!-- ── Page Hero ── -->
+      <section class="inner-hero reveal">
+        <div class="inner-hero-copy">
+          <p class="eyebrow">Personalización</p>
+          <h1>Crea tu <em>Gwenomo único</em></h1>
+          <p class="lede">Elige los colores, el estilo y la historia que quieres contar. Wendy lo hace realidad, con amor y detalle.</p>
+        </div>
+        <div class="inner-hero-gnomes">
+          <div class="customizer-section" style="margin:0;padding:1.5rem;border-radius:28px">
+            <div class="customizer-layout" style="gap:1.5rem;margin-top:1rem">
+              <div class="preview-stage" style="padding:1.5rem">
+                <div class="preview-sparkle-ring" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <svg class="preview-gnome" id="previewGnome" viewBox="0 0 160 280" xmlns="http://www.w3.org/2000/svg">
+                  <path id="pvHat" d="M80 6 L42 138 L118 138 Z" fill="#c54b43"/>
+                  <path d="M80 6 L42 138 L80 138 Z" fill="rgba(0,0,0,0.07)"/>
+                  <path d="M67,56 Q80,50 93,56" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                  <path d="M63,76 Q80,69 97,76" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                  <path d="M59,96 Q80,88 101,96" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                  <path d="M55,116 Q80,107 105,116" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+                  <rect id="pvBand" x="41" y="131" width="78" height="16" rx="6" fill="#d8ab49"/>
+                  <text x="80" y="143" text-anchor="middle" font-size="11" fill="white" font-weight="bold" font-family="sans-serif">★</text>
+                  <circle cx="80" cy="163" r="29" fill="#f5c080"/>
+                  <ellipse cx="60" cy="170" rx="10" ry="7" fill="rgba(215,75,55,0.22)"/>
+                  <ellipse cx="100" cy="170" rx="10" ry="7" fill="rgba(215,75,55,0.22)"/>
+                  <circle cx="70" cy="156" r="5" fill="#223128"/>
+                  <circle cx="90" cy="156" r="5" fill="#223128"/>
+                  <circle cx="71.8" cy="154" r="2" fill="white"/>
+                  <circle cx="91.8" cy="154" r="2" fill="white"/>
+                  <ellipse cx="80" cy="167" rx="8" ry="9" fill="#e8906a"/>
+                  <path d="M69,177 Q80,187 91,177" stroke="#b05030" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+                  <path id="pvBeard" d="M47,168 Q32,208 41,244 Q54,270 80,274 Q106,270 119,244 Q128,208 113,168 Z" fill="white"/>
+                  <path d="M53,184 Q65,177 77,184" stroke="#ddd8cc" stroke-width="2" fill="none"/>
+                  <path d="M57,201 Q70,193 83,201" stroke="#ddd8cc" stroke-width="2" fill="none"/>
+                  <path d="M54,219 Q68,211 83,219" stroke="#ddd8cc" stroke-width="2" fill="none"/>
+                  <rect id="pvCoat" x="51" y="180" width="58" height="58" rx="14" fill="#2f6b41"/>
+                  <rect x="51" y="180" width="29" height="58" rx="14" fill="rgba(0,0,0,0.06)"/>
+                  <circle cx="80" cy="193" r="3.5" fill="#d8ab49"/>
+                  <circle cx="80" cy="207" r="3.5" fill="#d8ab49"/>
+                  <circle cx="80" cy="221" r="3.5" fill="#d8ab49"/>
+                  <rect id="pvBelt" x="50" y="220" width="60" height="11" rx="4" fill="#d8ab49"/>
+                  <rect x="72" y="216" width="16" height="18" rx="4" fill="#d8ab49"/>
+                  <rect x="74" y="218" width="12" height="14" rx="3" fill="#1e4a2b"/>
+                  <rect id="pvArmL" x="32" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+                  <circle cx="42" cy="222" r="10" fill="#f5c080"/>
+                  <rect id="pvArmR" x="108" y="183" width="20" height="36" rx="10" fill="#2f6b41"/>
+                  <circle cx="118" cy="222" r="10" fill="#f5c080"/>
+                  <ellipse cx="69" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+                  <ellipse cx="92" cy="265" rx="19" ry="11" fill="#1e2e22"/>
+                  <ellipse cx="80" cy="275" rx="44" ry="6" fill="rgba(30,50,20,0.14)"/>
+                </svg>
+                <div class="preview-label" id="previewLabel">Tu Gwenomo personalizado ✨</div>
+              </div>
+              <div class="customizer-controls">
+                <div class="control-group">
+                  <label class="control-label">🎩 Sombrero</label>
+                  <div class="color-swatches" id="hatSwatches">
+                    <button class="swatch swatch-active" data-part="hat" data-color="#c54b43" data-name="Rojo navideño" style="background:#c54b43" title="Rojo" aria-label="Rojo navideño" aria-pressed="true"></button>
+                    <button class="swatch" data-part="hat" data-color="#2f6b41" data-name="Verde bosque" style="background:#2f6b41" title="Verde" aria-label="Verde bosque" aria-pressed="false"></button>
+                    <button class="swatch" data-part="hat" data-color="#3a6b9e" data-name="Azul cielo" style="background:#3a6b9e" title="Azul" aria-label="Azul cielo" aria-pressed="false"></button>
+                    <button class="swatch" data-part="hat" data-color="#7a4b9e" data-name="Morado" style="background:#7a4b9e" title="Morado" aria-label="Morado" aria-pressed="false"></button>
+                    <button class="swatch" data-part="hat" data-color="#d8ab49" data-name="Dorado" style="background:#d8ab49" title="Dorado" aria-label="Dorado" aria-pressed="false"></button>
+                    <button class="swatch" data-part="hat" data-color="#223128" data-name="Profundo" style="background:#223128" title="Verde profundo" aria-label="Verde profundo" aria-pressed="false"></button>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label">🧥 Cuerpo</label>
+                  <div class="color-swatches" id="coatSwatches">
+                    <button class="swatch swatch-active" data-part="coat" data-color="#2f6b41" data-name="Verde bosque" style="background:#2f6b41" title="Verde" aria-label="Verde bosque" aria-pressed="true"></button>
+                    <button class="swatch" data-part="coat" data-color="#c54b43" data-name="Rojo festivo" style="background:#c54b43" title="Rojo" aria-label="Rojo festivo" aria-pressed="false"></button>
+                    <button class="swatch" data-part="coat" data-color="#3a6b9e" data-name="Azul real" style="background:#3a6b9e" title="Azul" aria-label="Azul real" aria-pressed="false"></button>
+                    <button class="swatch" data-part="coat" data-color="#7a4b9e" data-name="Morado real" style="background:#7a4b9e" title="Morado" aria-label="Morado real" aria-pressed="false"></button>
+                    <button class="swatch" data-part="coat" data-color="#8B4513" data-name="Café cálido" style="background:#8B4513" title="Café" aria-label="Café cálido" aria-pressed="false"></button>
+                    <button class="swatch" data-part="coat" data-color="#1e4a2b" data-name="Verde oscuro" style="background:#1e4a2b" title="Verde oscuro" aria-label="Verde oscuro" aria-pressed="false"></button>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label">🧔 Barba</label>
+                  <div class="color-swatches" id="beardSwatches">
+                    <button class="swatch swatch-active swatch-light" data-part="beard" data-color="#ffffff" data-name="Blanca clásica" style="background:#ffffff" title="Blanca" aria-label="Blanca clásica" aria-pressed="true"></button>
+                    <button class="swatch" data-part="beard" data-color="#c8b89a" data-name="Arena" style="background:#c8b89a" title="Arena" aria-label="Arena dorada" aria-pressed="false"></button>
+                    <button class="swatch" data-part="beard" data-color="#8B6F47" data-name="Café" style="background:#8B6F47" title="Café" aria-label="Café" aria-pressed="false"></button>
+                    <button class="swatch" data-part="beard" data-color="#909090" data-name="Plateada" style="background:#909090" title="Gris" aria-label="Gris plateado" aria-pressed="false"></button>
+                    <button class="swatch" data-part="beard" data-color="#d8ab49" data-name="Dorada" style="background:#d8ab49" title="Dorada" aria-label="Dorada" aria-pressed="false"></button>
+                    <button class="swatch" data-part="beard" data-color="#f0c0d0" data-name="Rosa pastel" style="background:#f0c0d0" title="Rosa" aria-label="Rosa pastel" aria-pressed="false"></button>
+                  </div>
+                </div>
+                <div class="order-summary" id="orderSummary">
+                  <span class="order-tag" id="summaryHat">🎩 Rojo navideño</span>
+                  <span class="order-tag" id="summaryCoat">🧥 Verde bosque</span>
+                  <span class="order-tag" id="summaryBeard">🧔 Blanca clásica</span>
+                </div>
+                <button class="btn btn-whatsapp" id="orderBtn" type="button">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                  Enviar pedido por WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── What you can customize ── -->
+      <section class="options-section">
+        <div class="section-head reveal">
+          <p class="eyebrow">¿Qué puedes personalizar?</p>
+          <h2>Las posibilidades son <em>infinitas</em></h2>
+          <p>Elige uno o todos los atributos. Wendy te ayuda a combinarlos en el diseño perfecto.</p>
+        </div>
+
+        <div class="options-grid">
+
+          <article class="option-card reveal parchment">
+            <div class="option-icon">🎨</div>
+            <h3>Paleta de colores</h3>
+            <p>Elige los colores del sombrero, barba, cuerpo y accesorios. Tonos vivos, pasteles, clásicos navideños o lo que imagines.</p>
+            <div class="option-swatches">
+              <span style="background:#c54b43"></span>
+              <span style="background:#2f6b41"></span>
+              <span style="background:#3a6b9e"></span>
+              <span style="background:#7a4b9e"></span>
+              <span style="background:#d8ab49"></span>
+              <span style="background:#d84a7a"></span>
+            </div>
+          </article>
+
+          <article class="option-card reveal parchment" style="--reveal-delay:100ms">
+            <div class="option-icon">👷</div>
+            <h3>Profesión u oficio</h3>
+            <p>Médicos, maestros, chefs, bomberos, enfermeras, ingenieros, artistas… hacemos el gnomo que te representa a ti o a quien vas a regalar.</p>
+            <div class="option-tags">
+              <span class="mini-tag">👨‍⚕️ Médico</span>
+              <span class="mini-tag">👩‍🏫 Maestra</span>
+              <span class="mini-tag">👨‍🍳 Chef</span>
+              <span class="mini-tag">🚒 Bombero</span>
+              <span class="mini-tag">+ más</span>
+            </div>
+          </article>
+
+          <article class="option-card reveal parchment" style="--reveal-delay:200ms">
+            <div class="option-icon">🎁</div>
+            <h3>Motivo del regalo</h3>
+            <p>Cumpleaños, graduación, baby shower, San Valentín, Navidad, aniversario, jubilación. Cada ocasión merece un guardián especial.</p>
+            <div class="option-tags">
+              <span class="mini-tag">🎂 Cumpleaños</span>
+              <span class="mini-tag">🎓 Graduación</span>
+              <span class="mini-tag">💍 Aniversario</span>
+              <span class="mini-tag">👶 Baby shower</span>
+            </div>
+          </article>
+
+          <article class="option-card reveal parchment" style="--reveal-delay:300ms">
+            <div class="option-icon">✨</div>
+            <h3>Estilo y personalidad</h3>
+            <p>Tierno y dulce, elegante y sofisticado, divertido y travieso. El gnomo puede tener la misma energía que la persona que lo va a recibir.</p>
+            <div class="option-tags">
+              <span class="mini-tag">🥰 Tierno</span>
+              <span class="mini-tag">💎 Elegante</span>
+              <span class="mini-tag">😄 Divertido</span>
+              <span class="mini-tag">🎭 Temático</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── Process steps ── -->
+      <section class="steps-section">
+        <div class="section-head reveal">
+          <p class="eyebrow">¿Cómo funciona?</p>
+          <h2>Tres pasos <em>sencillos</em></h2>
+        </div>
+        <div class="steps-row">
+
+          <div class="step-item reveal">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>Elige una base</h3>
+              <p>Parte desde un estilo clásico, de colores o una edición especial. Puedes usar el configurador de arriba para visualizarlo.</p>
+            </div>
+          </div>
+
+          <div class="step-connector" aria-hidden="true">→</div>
+
+          <div class="step-item reveal" style="--reveal-delay:120ms">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>Añade tu historia</h3>
+              <p>Cuéntanos la profesión, la ocasión, el nombre o la personalidad del destinatario. Más detalles = gnomo más perfecto.</p>
+            </div>
+          </div>
+
+          <div class="step-connector" aria-hidden="true">→</div>
+
+          <div class="step-item reveal" style="--reveal-delay:240ms">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>Confirma con Wendy</h3>
+              <p>Todo termina en una conversación simple por WhatsApp. Wendy te confirma el precio, tiempo de entrega y te manda fotos del proceso.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── CTA Final ── -->
+      <section class="cat-cta-band reveal parchment" style="text-align:center">
+        <div style="max-width:560px;margin:0 auto">
+          <p class="eyebrow">¿Listo para empezar?</p>
+          <h2>Tu Gwenomo perfecto <em>te espera</em></h2>
+          <p style="color:var(--muted);line-height:1.7;margin:0.8rem 0 1.6rem">Usa el configurador de arriba y luego envíanos el pedido por WhatsApp. Wendy responderá con el precio y los detalles.</p>
+          <a class="btn btn-primary" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">✨ Configurar mi Gwenomo</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer-brand">GWENOMO <em>by Wen</em></p>
+      <p>Hecho con cariño, color y magia ✨ · Ecuador</p>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+      // Scroll progress
+      const bar = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', () => {
+        const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        if (bar) bar.style.width = pct + '%';
+      }, { passive: true });
+
+      // Reveal
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+      // Tilt cards
+      document.querySelectorAll('.tilt-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          const rY = ((e.clientX - r.left) / r.width - 0.5) * 10;
+          const rX = ((e.clientY - r.top) / r.height - 0.5) * -10;
+          card.style.transform = `perspective(900px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-3px)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+      });
+
+      // Customizer (same logic as index)
+      const state = { hat: { color: '#c54b43', name: 'Rojo navideño' }, coat: { color: '#2f6b41', name: 'Verde bosque' }, beard: { color: '#ffffff', name: 'Blanca clásica' } };
+      const parts = { hat: ['pvHat'], coat: ['pvCoat', 'pvArmL', 'pvArmR'], beard: ['pvBeard'] };
+
+      function applyColor(part, color) {
+        state[part].color = color;
+        (parts[part] || []).forEach(id => { const el = document.getElementById(id); if (el) el.setAttribute('fill', color); });
+        const pg = document.getElementById('previewGnome');
+        if (pg) { pg.classList.remove('updating'); void pg.offsetWidth; pg.classList.add('updating'); }
+        updateSummary();
+      }
+
+      function updateSummary() {
+        const h = document.getElementById('summaryHat');
+        const c = document.getElementById('summaryCoat');
+        const b = document.getElementById('summaryBeard');
+        if (h) h.textContent = `🎩 ${state.hat.name}`;
+        if (c) c.textContent = `🧥 ${state.coat.name}`;
+        if (b) b.textContent = `🧔 ${state.beard.name}`;
+      }
+
+      document.querySelectorAll('.swatch').forEach(sw => {
+        sw.addEventListener('click', () => {
+          const part = sw.dataset.part;
+          document.querySelectorAll(`.swatch[data-part="${part}"]`).forEach(s => { s.classList.remove('swatch-active'); s.setAttribute('aria-pressed', 'false'); });
+          sw.classList.add('swatch-active'); sw.setAttribute('aria-pressed', 'true');
+          state[part] = { color: sw.dataset.color, name: sw.dataset.name };
+          applyColor(part, sw.dataset.color);
+        });
+      });
+
+      const orderBtn = document.getElementById('orderBtn');
+      if (orderBtn) {
+        orderBtn.addEventListener('click', () => {
+          let msg = `¡Hola Wen! Quiero encargar un Gwenomo personalizado 🎄\n\n🎩 Sombrero: ${state.hat.name}\n🧥 Cuerpo: ${state.coat.name}\n🧔 Barba: ${state.beard.name}\n\n¿Cuánto cuesta? ✨`;
+          window.open(`https://wa.me/593996259465?text=${encodeURIComponent(msg)}`, '_blank', 'noreferrer');
+          const orig = orderBtn.innerHTML;
+          orderBtn.innerHTML = `<span>✅ ¡Abriendo WhatsApp…</span>`;
+          orderBtn.disabled = true;
+          setTimeout(() => { orderBtn.innerHTML = orig; orderBtn.disabled = false; }, 3000);
+        });
+      }
+    </script>
+  </body>
+</html>
