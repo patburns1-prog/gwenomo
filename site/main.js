@@ -120,35 +120,28 @@ document.querySelectorAll('.tilt-card').forEach((card) => {
   card.addEventListener('mouseleave', () => { card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)'; });
 });
 
-const bubbleLines = { es: ['¡Hola! Soy un pequeño guardián de alegría.', '¿Buscas un regalo con personalidad?', 'Cada Gwenomo tiene su propia vibra ✨', 'Puedo ser tierno, elegante o juguetón.'], en: ['Hi! I am a little guardian of joy.', 'Looking for a gift with personality?', 'Every Gwenomo has its own vibe ✨', 'I can be sweet, elegant, or playful.'] };
-const speechBubble = document.getElementById('speechBubble');
-let bubbleIndex = 0;
-setInterval(() => {
-  if (!speechBubble) return;
-  const lines = bubbleLines[currentLang] || bubbleLines.es;
-  bubbleIndex = (bubbleIndex + 1) % lines.length;
-  speechBubble.textContent = lines[bubbleIndex];
-}, 3200);
-
 const sparkles = document.querySelector('.sparkles');
 window.addEventListener('pointermove', (event) => {
   const x = (event.clientX / window.innerWidth) * 100;
   const y = (event.clientY / window.innerHeight) * 100;
-  if (sparkles) sparkles.style.backgroundPosition = `${x / 8}px ${y / 8}px, ${40 + x / 14}px ${60 + y / 14}px`;
-  const guardian = document.getElementById('heroGuardian');
-  if (guardian) {
-    const rx = (event.clientX / window.innerWidth - 0.5) * 14;
-    const ry = (event.clientY / window.innerHeight - 0.5) * 10;
-    guardian.style.transform = `perspective(1100px) rotateY(${rx}deg) rotateX(${-ry}deg)`;
-  }
+  if (sparkles) sparkles.style.backgroundPosition = `${x / 10}px ${y / 10}px, ${40 + x / 18}px ${60 + y / 18}px`;
 });
 
-document.getElementById('magicButton')?.addEventListener('click', () => {
-  const guardian = document.getElementById('heroGuardian');
-  guardian?.classList.add('bursting');
-  if (speechBubble) speechBubble.textContent = currentLang === 'es' ? '✨ Poof... llegó una chispa extra de magia.' : '✨ Poof... an extra spark of magic just arrived.';
-  setTimeout(() => guardian?.classList.remove('bursting'), 520);
-});
+const welcomeOverlay = document.getElementById('welcomeOverlay');
+const welcomeBubble = document.getElementById('welcomeBubble');
+if (welcomeOverlay) {
+  document.body.classList.add('welcome-active');
+  welcomeOverlay.classList.add('active');
+  if (welcomeBubble) {
+    welcomeBubble.textContent = 'GWENOMO ✨';
+  }
+  window.setTimeout(() => {
+    welcomeOverlay.classList.add('exit');
+  }, 1650);
+  window.setTimeout(() => {
+    document.body.classList.remove('welcome-active');
+  }, 2250);
+}
 
 window.setTimeout(() => document.getElementById('welcomeGnome')?.classList.add('active'), 2200);
 
