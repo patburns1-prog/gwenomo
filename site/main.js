@@ -133,7 +133,7 @@ if (welcomeOverlay) {
   document.body.classList.add('welcome-active');
   welcomeOverlay.classList.add('active');
   if (welcomeBubble) {
-    welcomeBubble.textContent = 'GWENOMO ✨';
+    welcomeBubble.textContent = currentLang === 'es' ? '¡Dale vida a tu idea, personaliza tu Gwenomo! ✨' : 'Bring your idea to life, personalize your Gwenomo! ✨';
   }
   window.setTimeout(() => {
     welcomeOverlay.classList.add('exit');

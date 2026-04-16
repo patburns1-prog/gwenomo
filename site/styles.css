@@ -654,7 +654,14 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .hero { padding-top: 1rem; }
+  .hero {
+    padding-top: 1rem;
+    grid-template-areas:
+      "visual"
+      "copy";
+  }
+  .hero-copy { grid-area: copy; }
+  .hero-visual { grid-area: visual; }
   .hero-visual,
   .guardian-stage { min-height: 500px; }
   .floating-card { width: 180px; }
