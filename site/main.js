@@ -4,7 +4,7 @@ const translations = {
     'hero.eyebrow': 'Hechos en Ecuador · Hechos con amor', 'hero.titlePrefix': 'Los gnomos que llenan tu hogar de', 'hero.titleAccent': 'magia, color y personalidad',
     'hero.lede': 'Bienvenido a GWENOMO by Wen: una colección encantadora de gnomos artesanales creados para regalar, decorar y arrancar sonrisas desde el primer vistazo.',
     'hero.ctaPrimary': 'Haz tu pedido', 'hero.ctaSecondary': 'Ver la colección', 'hero.trust1': '✨ Artesanales', 'hero.trust2': '🎁 Perfectos para regalar', 'hero.trust3': '🌈 Varios colores y estilos',
-    'hero.badge': 'Guardianes de la Navidad', 'hero.magicBtn': '✨ Tócame', 'band.strong': 'Una marca con alma:', 'band.text': 'pequeños guardianes decorativos para espacios felices, regalos memorables y temporadas llenas de encanto.',
+    'band.strong': 'Una marca con alma:', 'band.text': 'pequeños guardianes decorativos para espacios felices, regalos memorables y temporadas llenas de encanto.',
     'signature.eyebrow': 'Favorito clásico', 'signature.title': 'El Gwenomo rojo que roba miradas', 'signature.text': 'Un estilo clásico, navideño y acogedor que se siente como un abrazo hecho a mano. Perfecto para centros de mesa, repisas o regalos que quieren dejar huella.', 'signature.note': 'Hecho con creatividad, paciencia y mucho corazón.',
     'collection.eyebrow': 'Colección destacada', 'collection.title': 'Elige el Gwenomo con tu estilo', 'collection.text': 'Pensados para Navidad, regalos especiales y rincones con personalidad.',
     'collection.card1.tag': 'Colores', 'collection.card1.title': 'Combina tonos y personalidad', 'collection.card1.text': 'Versiones en distintos colores para que cada Gwenomo se vea único y combine con tu espacio o regalo.',
@@ -31,7 +31,7 @@ const translations = {
     'hero.eyebrow': 'Made in Ecuador · Made with love', 'hero.titlePrefix': 'The gnomes that fill your home with', 'hero.titleAccent': 'magic, color, and personality',
     'hero.lede': 'Welcome to GWENOMO by Wen: an enchanting collection of handmade gnomes created to gift, decorate, and spark smiles at first sight.',
     'hero.ctaPrimary': 'Place your order', 'hero.ctaSecondary': 'See the collection', 'hero.trust1': '✨ Handmade', 'hero.trust2': '🎁 Perfect for gifting', 'hero.trust3': '🌈 Many colors and styles',
-    'hero.badge': 'Guardians of Christmas', 'hero.magicBtn': '✨ Tap me', 'band.strong': 'A brand with soul:', 'band.text': 'little decorative guardians for happy spaces, memorable gifts, and seasons full of charm.',
+    'band.strong': 'A brand with soul:', 'band.text': 'little decorative guardians for happy spaces, memorable gifts, and seasons full of charm.',
     'signature.eyebrow': 'Classic favorite', 'signature.title': 'The red Gwenomo that steals the show', 'signature.text': 'A classic, cozy holiday style that feels like a handmade hug. Perfect for centerpieces, shelves, or gifts that leave a mark.', 'signature.note': 'Made with creativity, patience, and a lot of heart.',
     'collection.eyebrow': 'Featured collection', 'collection.title': 'Choose the Gwenomo that fits your style', 'collection.text': 'Made for Christmas, special gifts, and corners full of personality.',
     'collection.card1.tag': 'Colors', 'collection.card1.title': 'Mix shades and personality', 'collection.card1.text': 'Different color combinations so each Gwenomo feels unique and fits your space or gift.',
@@ -60,7 +60,7 @@ const productData = {
   'colores-pareja': { tag: 'Colores', title: 'Parejas coloridas', text: 'Versiones vivas y llamativas para decoración alegre y combinaciones personalizadas.', image: '/assets/color-pairs.jpg', alt: 'Gnomos coloridos' },
   'profesiones': { tag: 'Personalización', title: 'Profesiones', text: 'Diseños hechos para representar oficios, historias y regalos con identidad propia.', image: '/assets/custom-professions.jpg', alt: 'Gnomos por profesión' },
   'stpat': { tag: 'Edición especial', title: 'San Patricio', text: 'Un ejemplo claro de que GWENOMO puede crear versiones temáticas y estacionales con mucho carácter.', image: '/assets/stpat-spanish.jpg', alt: 'Gnomos San Patricio' },
-  'cocoa-cabin': { tag: 'Acogedor', title: 'Cabaña de cacao', text: 'Un Gwenomo suave y sereno en tonos crema y cacao, con una taza de corazón para transmitir calidez, ternura y hogar.', image: '/assets/cocoa-cabin-heart-mug-gnome.png', alt: 'Gnomo cálido estilo cabaña con taza de corazón' }
+  'cocoa-cabin': { tag: 'Acogedor', title: 'Cabaña de cacao', text: 'Un Gwenomo suave y sereno en tonos crema y cacao, con una taza de corazón para transmitir calidez, ternura y hogar.', image: '/assets/cocoa-cabin-heart-mug-gnome.jpg', alt: 'Gnomo cálido estilo cabaña con taza de corazón' }
 };
 
 let currentLang = localStorage.getItem('gwenomo-lang') || 'es';

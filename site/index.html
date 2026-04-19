@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="welcome-overlay" id="welcomeOverlay" aria-hidden="true">
       <div class="welcome-stage">
         <div class="welcome-glow"></div>
         <img class="welcome-gnome-art" src="/assets/gnome-hello.jpg" alt="Gnomo saludando" />
+        <span class="sr-only">Animación de bienvenida de GWENOMO</span>
         <div class="welcome-bubble" id="welcomeBubble">¡Hola! Bienvenido a GWENOMO ✨</div>
       </div>
     </div>
@@ -31,7 +32,7 @@
       <div class="topbar-controls">
         <nav>
           <a href="./catalogo.html" data-i18n="nav.collection">Colección</a>
-          <a href="/personaliza.html" data-i18n="nav.customize">Personaliza</a>
+          <a href="./personaliza.html" data-i18n="nav.customize">Personaliza</a>
           <a href="#como-pedir" data-i18n="nav.how">Cómo pedir</a>
           <a href="#pedido" data-i18n="nav.orders">Pedidos</a>
         </nav>
@@ -99,7 +100,7 @@
         </div>
         <div class="section-cta-row reveal">
           <a class="btn btn-ghost" href="./catalogo.html">Ver catálogo completo</a>
-          <a class="btn btn-ghost" href="/personaliza.html">Explorar personalización</a>
+          <a class="btn btn-ghost" href="./personaliza.html">Explorar personalización</a>
         </div>
       </section>
 
@@ -115,7 +116,7 @@
           <article class="arrival-card tilt-card"><img src="/assets/blue-winter-sitting-gnome-white-heart-ornament-bell-hat.jpg" alt="Gnomo azul de invierno con corazón blanco" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card3.tag">Azul invierno</span><h3 data-i18n="arrivals.card3.title">Con corazón en mano</h3></div></article>
           <article class="arrival-card tilt-card"><img src="/assets/purple-christmas-sitting-gnome-gray-slippers-white-legs.jpg" alt="Gnomo morado sentado con pantuflas suaves" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card4.tag">Morado</span><h3 data-i18n="arrivals.card4.title">Encanto con personalidad</h3></div></article>
           <article class="arrival-card tilt-card"><img src="/assets/green-musician-christmas-gnome-guitar-sitting-rock.jpg" alt="Gnomo músico verde con guitarra" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card5.tag">Músico</span><h3 data-i18n="arrivals.card5.title">Serenata navideña</h3></div></article>
-          <article class="arrival-card tilt-card"><img src="/assets/cocoa-cabin-heart-mug-gnome.png" alt="Gnomo acogedor en tonos crema y cacao con taza de corazón" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card6.tag">Acogedor</span><h3 data-i18n="arrivals.card6.title">Cabaña de cacao</h3></div></article>
+          <article class="arrival-card tilt-card"><img src="/assets/cocoa-cabin-heart-mug-gnome.jpg" alt="Gnomo acogedor en tonos crema y cacao con taza de corazón" /><div class="arrival-copy"><span class="tag" data-i18n="arrivals.card6.tag">Acogedor</span><h3 data-i18n="arrivals.card6.title">Cabaña de cacao</h3></div></article>
         </div>
       </section>
 
@@ -139,6 +140,6 @@
 
     <div class="peeking-gnome" id="welcomeGnome" aria-hidden="true"><img src="/assets/gnome-hello.jpg" alt="Gnomo saludando" /><div class="hello-toast" data-i18n="hello.toast">¡Hola! Bienvenido a GWENOMO</div></div>
     <footer class="footer"><p data-i18n="footer.text">GWENOMO by Wen · Hecho con cariño, color y magia ✨</p></footer>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
