@@ -32,6 +32,10 @@ body.welcome-active {
   overflow: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button { font: inherit; }
@@ -238,6 +242,10 @@ main,
   gap: 1rem;
   font-weight: 700;
   color: var(--green-deep);
+}
+
+.topbar nav a[aria-current='page'] {
+  color: var(--red);
 }
 
 .lang-toggle {
@@ -478,7 +486,7 @@ main {
 .signature-spotlight { grid-template-columns: 1fr 1fr; }
 .seasonal-grid,
 .steps-grid { grid-template-columns: repeat(2, 1fr); }
-.arrivals-grid { grid-template-columns: repeat(5, 1fr); }
+.arrivals-grid { grid-template-columns: repeat(3, 1fr); }
 .arrivals-grid-compact .arrival-card { padding: 0.9rem; }
 .arrivals-grid-compact .arrival-copy { padding: 0.2rem 0.2rem 0; }
 .arrivals-grid-compact .arrival-card h3 { font-size: 1.2rem; }
@@ -653,8 +661,17 @@ main {
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms ease, transform 700ms ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .tilt-card { transform-style: preserve-3d; transition: transform 180ms ease; }
+.product-modal-trigger[role='button'] { cursor: pointer; }
+.product-modal-trigger[role='button']:focus-visible { outline: 3px solid rgba(216, 171, 73, 0.9); outline-offset: 4px; }
 .bursting { animation: burst 500ms ease; }
 @keyframes burst { 0% { transform: scale(1); } 40% { transform: scale(1.06) rotate(-2deg); } 100% { transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+  .peeking-gnome { transition: none; }
+}
 
 @media (max-width: 980px) {
   .hero,

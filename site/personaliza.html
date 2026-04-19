@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GWENOMO | Personaliza</title>
     <meta name="description" content="Personaliza tu Gwenomo: colores, estilo, ocasión y detalles para crear un regalo artesanal único y lleno de cariño." />
+    <meta name="theme-color" content="#fff8ef" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -14,12 +15,12 @@
     <div class="scroll-progress" id="scrollProgress"></div>
     <div class="page-shell">
       <header class="topbar topbar-static">
-        <div class="brand-mark">🎄 GWENOMO</div>
+        <a class="brand-mark" href="./index.html" aria-label="GWENOMO, volver al inicio">🎄 GWENOMO</a>
         <div class="topbar-controls">
-          <nav>
+          <nav aria-label="Principal">
             <a href="./index.html" data-i18n-page="nav.home">Inicio</a>
             <a href="./catalogo.html" data-i18n-page="nav.catalog">Catálogo</a>
-            <a href="./personaliza.html" data-i18n-page="nav.customize">Personaliza</a>
+            <a href="./personaliza.html" data-i18n-page="nav.customize" aria-current="page">Personaliza</a>
           </nav>
           <div class="lang-toggle">
             <button class="lang-btn active" data-lang="es" type="button">ES</button>
@@ -61,36 +62,36 @@
             <div class="control-group">
               <label class="control-label" data-i18n-page="custom.hat">🎩 Sombrero</label>
               <div class="color-swatches">
-                <button class="swatch swatch-active" data-part="hat" data-color="#c54b43" data-name-es="Rojo navideño" data-name-en="Christmas red" style="background:#c54b43"></button>
-                <button class="swatch" data-part="hat" data-color="#2f6b41" data-name-es="Verde bosque" data-name-en="Forest green" style="background:#2f6b41"></button>
-                <button class="swatch" data-part="hat" data-color="#3a6b9e" data-name-es="Azul cielo" data-name-en="Sky blue" style="background:#3a6b9e"></button>
-                <button class="swatch" data-part="hat" data-color="#7a4b9e" data-name-es="Morado mágico" data-name-en="Magic purple" style="background:#7a4b9e"></button>
-                <button class="swatch" data-part="hat" data-color="#d8ab49" data-name-es="Dorado festivo" data-name-en="Festive gold" style="background:#d8ab49"></button>
+                <button class="swatch swatch-active" data-part="hat" data-color="#c54b43" data-name-es="Rojo navideño" data-name-en="Christmas red" style="background:#c54b43" type="button" aria-label="Sombrero rojo navideño"></button>
+                <button class="swatch" data-part="hat" data-color="#2f6b41" data-name-es="Verde bosque" data-name-en="Forest green" style="background:#2f6b41" type="button" aria-label="Sombrero verde bosque"></button>
+                <button class="swatch" data-part="hat" data-color="#3a6b9e" data-name-es="Azul cielo" data-name-en="Sky blue" style="background:#3a6b9e" type="button" aria-label="Sombrero azul cielo"></button>
+                <button class="swatch" data-part="hat" data-color="#7a4b9e" data-name-es="Morado mágico" data-name-en="Magic purple" style="background:#7a4b9e" type="button" aria-label="Sombrero morado mágico"></button>
+                <button class="swatch" data-part="hat" data-color="#d8ab49" data-name-es="Dorado festivo" data-name-en="Festive gold" style="background:#d8ab49" type="button" aria-label="Sombrero dorado festivo"></button>
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" data-i18n-page="custom.coat">🧥 Cuerpo</label>
               <div class="color-swatches">
-                <button class="swatch swatch-active" data-part="coat" data-color="#2f6b41" data-name-es="Verde bosque" data-name-en="Forest green" style="background:#2f6b41"></button>
-                <button class="swatch" data-part="coat" data-color="#c54b43" data-name-es="Rojo festivo" data-name-en="Festive red" style="background:#c54b43"></button>
-                <button class="swatch" data-part="coat" data-color="#3a6b9e" data-name-es="Azul real" data-name-en="Royal blue" style="background:#3a6b9e"></button>
-                <button class="swatch" data-part="coat" data-color="#7a4b9e" data-name-es="Morado real" data-name-en="Royal purple" style="background:#7a4b9e"></button>
-                <button class="swatch" data-part="coat" data-color="#8B4513" data-name-es="Café cálido" data-name-en="Warm brown" style="background:#8B4513"></button>
+                <button class="swatch swatch-active" data-part="coat" data-color="#2f6b41" data-name-es="Verde bosque" data-name-en="Forest green" style="background:#2f6b41" type="button" aria-label="Cuerpo verde bosque"></button>
+                <button class="swatch" data-part="coat" data-color="#c54b43" data-name-es="Rojo festivo" data-name-en="Festive red" style="background:#c54b43" type="button" aria-label="Cuerpo rojo festivo"></button>
+                <button class="swatch" data-part="coat" data-color="#3a6b9e" data-name-es="Azul real" data-name-en="Royal blue" style="background:#3a6b9e" type="button" aria-label="Cuerpo azul real"></button>
+                <button class="swatch" data-part="coat" data-color="#7a4b9e" data-name-es="Morado real" data-name-en="Royal purple" style="background:#7a4b9e" type="button" aria-label="Cuerpo morado real"></button>
+                <button class="swatch" data-part="coat" data-color="#8B4513" data-name-es="Café cálido" data-name-en="Warm brown" style="background:#8B4513" type="button" aria-label="Cuerpo café cálido"></button>
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" data-i18n-page="custom.beard">🧔 Barba</label>
               <div class="color-swatches">
-                <button class="swatch swatch-active" data-part="beard" data-color="#ffffff" data-name-es="Blanca clásica" data-name-en="Classic white" style="background:#ffffff;border:1px solid #ddd"></button>
-                <button class="swatch" data-part="beard" data-color="#c8b89a" data-name-es="Arena dorada" data-name-en="Golden sand" style="background:#c8b89a"></button>
-                <button class="swatch" data-part="beard" data-color="#8B6F47" data-name-es="Café" data-name-en="Brown" style="background:#8B6F47"></button>
-                <button class="swatch" data-part="beard" data-color="#909090" data-name-es="Gris plateado" data-name-en="Silver gray" style="background:#909090"></button>
-                <button class="swatch" data-part="beard" data-color="#f0c0d0" data-name-es="Rosa pastel" data-name-en="Pastel pink" style="background:#f0c0d0"></button>
+                <button class="swatch swatch-active" data-part="beard" data-color="#ffffff" data-name-es="Blanca clásica" data-name-en="Classic white" style="background:#ffffff;border:1px solid #ddd" type="button" aria-label="Barba blanca clásica"></button>
+                <button class="swatch" data-part="beard" data-color="#c8b89a" data-name-es="Arena dorada" data-name-en="Golden sand" style="background:#c8b89a" type="button" aria-label="Barba arena dorada"></button>
+                <button class="swatch" data-part="beard" data-color="#8B6F47" data-name-es="Café" data-name-en="Brown" style="background:#8B6F47" type="button" aria-label="Barba café"></button>
+                <button class="swatch" data-part="beard" data-color="#909090" data-name-es="Gris plateado" data-name-en="Silver gray" style="background:#909090" type="button" aria-label="Barba gris plateado"></button>
+                <button class="swatch" data-part="beard" data-color="#f0c0d0" data-name-es="Rosa pastel" data-name-en="Pastel pink" style="background:#f0c0d0" type="button" aria-label="Barba rosa pastel"></button>
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" for="recipientName" data-i18n-page="custom.forWho">📝 ¿Para quién es?</label>
-              <input id="recipientName" class="name-input" type="text" placeholder="Ej: para mamá, para mi oficina..." maxlength="60" />
+              <input id="recipientName" class="name-input" type="text" placeholder="Ej: para mamá, para mi oficina..." data-placeholder-es="Ej: para mamá, para mi oficina..." data-placeholder-en="Ex: for mom, for my office..." maxlength="60" />
             </div>
             <div class="order-summary" id="orderSummary">
               <span class="order-tag" id="summaryHat">🎩 Rojo navideño</span>
@@ -113,10 +114,10 @@
             </ul>
           </article>
           <article class="feature-image tilt-card">
-            <img src="/assets/custom-professions.jpg" alt="Gnomos personalizados por profesión" />
+            <img src="/assets/custom-professions.jpg" alt="Gnomos personalizados por profesión" loading="lazy" />
           </article>
           <article class="feature-image tilt-card">
-            <img src="/assets/color-pairs.jpg" alt="Variantes de color" />
+            <img src="/assets/color-pairs.jpg" alt="Variantes de color" loading="lazy" />
           </article>
         </section>
       </main>

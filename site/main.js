@@ -18,6 +18,8 @@ const translations = {
     'arrivals.card4.tag': 'Morado', 'arrivals.card4.title': 'Encanto con personalidad', 'arrivals.card4.text': 'Color, textura y ternura en una pieza que se siente original, alegre y perfecta para destacar.',
     'arrivals.card5.tag': 'Músico', 'arrivals.card5.title': 'Serenata navideña', 'arrivals.card5.text': 'Una versión creativa y encantadora para amantes de la música, los detalles y los regalos con historia.',
     'arrivals.card6.tag': 'Acogedor', 'arrivals.card6.title': 'Cabaña de cacao', 'arrivals.card6.text': 'Una pieza cálida, suave y romántica que transmite hogar, invierno y detalles hechos con cariño.',
+    'arrivals.card7.tag': 'Personalizado', 'arrivals.card7.title': 'Ideas con historia',
+    'arrivals.card8.tag': 'Edición especial', 'arrivals.card8.title': 'Temporadas con encanto',
     'custom.eyebrow': 'Personaliza tu Gwenomo', 'custom.title': 'Hazlo tan especial como la persona que lo recibe', 'custom.text': 'Colores, profesiones, detalles y combinaciones para crear una pieza con mucha intención.', 'custom.panelTitle': 'Opciones que ya vemos claras',
     'custom.li1': '🎨 Colores diferentes para sombrero, manos y detalles', 'custom.li2': '🩺 Profesiones u oficios personalizados', 'custom.li3': '🎁 Diseños pensados para regalo', 'custom.li4': '✨ Estilos tiernos, elegantes o festivos',
     'interactive.eyebrow': 'Un toque interactivo', 'interactive.title': 'Descubre la energía de tu Gwenomo', 'interactive.text': 'Toca una carta y mira qué personalidad aparece.', 'interactive.card1': 'Protector', 'interactive.card2': 'Regalonero', 'interactive.card3': 'Hogareño', 'interactive.card4': 'Navideño', 'interactive.output': 'Haz clic en una carta para revelar su magia.',
@@ -45,6 +47,8 @@ const translations = {
     'arrivals.card4.tag': 'Purple', 'arrivals.card4.title': 'Charm with personality', 'arrivals.card4.text': 'Color, texture, and sweetness in a piece that feels original, cheerful, and made to stand out.',
     'arrivals.card5.tag': 'Musician', 'arrivals.card5.title': 'Christmas serenade', 'arrivals.card5.text': 'A creative, charming version for music lovers and gifts that tell a story.',
     'arrivals.card6.tag': 'Cozy', 'arrivals.card6.title': 'Cocoa cabin', 'arrivals.card6.text': 'A warm, soft, romantic piece that feels like home, winter, and thoughtful handmade detail.',
+    'arrivals.card7.tag': 'Custom', 'arrivals.card7.title': 'Ideas with a story',
+    'arrivals.card8.tag': 'Special edition', 'arrivals.card8.title': 'Seasons with charm',
     'custom.eyebrow': 'Customize your Gwenomo', 'custom.title': 'Make it as special as the person receiving it', 'custom.text': 'Colors, professions, details, and combinations to create a piece full of intention.', 'custom.panelTitle': 'Options we can already see clearly',
     'custom.li1': '🎨 Different colors for hat, hands, and details', 'custom.li2': '🩺 Personalized professions or trades', 'custom.li3': '🎁 Designs made for gifting', 'custom.li4': '✨ Sweet, elegant, or festive styles',
     'interactive.eyebrow': 'An interactive touch', 'interactive.title': 'Discover your Gwenomo’s energy', 'interactive.text': 'Tap a card and see which personality appears.', 'interactive.card1': 'Protector', 'interactive.card2': 'Gift-giver', 'interactive.card3': 'Homey', 'interactive.card4': 'Christmas spirit', 'interactive.output': 'Click a card to reveal its magic.',
@@ -76,9 +80,14 @@ function applyTranslations(lang) {
     const value = translations[lang]?.[key];
     if (value) el.textContent = value;
   });
+  document.querySelectorAll('[data-placeholder-es][data-placeholder-en]').forEach((el) => {
+    el.placeholder = lang === 'es' ? el.dataset.placeholderEs : el.dataset.placeholderEn;
+  });
   document.querySelectorAll('.lang-btn').forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === lang));
+  applyPageTranslations(lang);
   if (fortuneOutput && !fortuneOutput.dataset.locked) fortuneOutput.textContent = translations[lang]['interactive.output'];
   if (moodDisplay && !moodDisplay.dataset.locked) moodDisplay.textContent = translations[lang]['play.output'];
+  updateOrderSummary();
 }
 
 document.querySelectorAll('.lang-btn').forEach((btn) => btn.addEventListener('click', () => applyTranslations(btn.dataset.lang)));
@@ -123,30 +132,36 @@ document.querySelectorAll('.tilt-card').forEach((card) => {
   card.addEventListener('mouseleave', () => { card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)'; });
 });
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const sparkles = document.querySelector('.sparkles');
 window.addEventListener('pointermove', (event) => {
   const x = (event.clientX / window.innerWidth) * 100;
   const y = (event.clientY / window.innerHeight) * 100;
   if (sparkles) sparkles.style.backgroundPosition = `${x / 10}px ${y / 10}px, ${40 + x / 18}px ${60 + y / 18}px`;
-});
+}, { passive: true });
 
 const welcomeOverlay = document.getElementById('welcomeOverlay');
 const welcomeBubble = document.getElementById('welcomeBubble');
 if (welcomeOverlay) {
-  document.body.classList.add('welcome-active');
-  welcomeOverlay.classList.add('active');
-  if (welcomeBubble) {
-    welcomeBubble.textContent = currentLang === 'es' ? '¡Dale vida a tu idea, personaliza tu Gwenomo! ✨' : 'Bring your idea to life, personalize your Gwenomo! ✨';
+  if (!prefersReducedMotion) {
+    document.body.classList.add('welcome-active');
+    welcomeOverlay.classList.add('active');
+    if (welcomeBubble) {
+      welcomeBubble.textContent = currentLang === 'es' ? '¡Dale vida a tu idea, personaliza tu Gwenomo! ✨' : 'Bring your idea to life, personalize your Gwenomo! ✨';
+    }
+    window.setTimeout(() => {
+      welcomeOverlay.classList.add('exit');
+    }, 1650);
+    window.setTimeout(() => {
+      document.body.classList.remove('welcome-active');
+    }, 2250);
+  } else {
+    welcomeOverlay.hidden = true;
   }
-  window.setTimeout(() => {
-    welcomeOverlay.classList.add('exit');
-  }, 1650);
-  window.setTimeout(() => {
-    document.body.classList.remove('welcome-active');
-  }, 2250);
 }
 
-window.setTimeout(() => document.getElementById('welcomeGnome')?.classList.add('active'), 2200);
+window.setTimeout(() => document.getElementById('welcomeGnome')?.classList.add('active'), prefersReducedMotion ? 0 : 2200);
 
 const modal = document.getElementById('productModal');
 const modalImage = document.getElementById('modalImage');
@@ -157,14 +172,32 @@ function openModal(key) {
   const product = productData[key];
   if (!product || !modal) return;
   modal.hidden = false;
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
   modalImage.src = product.image;
   modalImage.alt = product.alt;
   modalTag.textContent = product.tag;
   modalTitle.textContent = product.title;
   modalText.textContent = product.text;
 }
-function closeModal() { if (modal) modal.hidden = true; }
-document.querySelectorAll('.product-modal-trigger').forEach((card) => card.addEventListener('click', () => openModal(card.dataset.product)));
+function closeModal() {
+  if (!modal) return;
+  modal.hidden = true;
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+document.querySelectorAll('.product-modal-trigger').forEach((card) => {
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
+  card.setAttribute('aria-label', `Ver detalles de ${productData[card.dataset.product]?.title || 'este Gwenomo'}`);
+  card.addEventListener('click', () => openModal(card.dataset.product));
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openModal(card.dataset.product);
+    }
+  });
+});
 document.querySelectorAll('[data-close-modal]').forEach((el) => el.addEventListener('click', closeModal));
 window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
@@ -211,18 +244,21 @@ document.querySelectorAll('.filter-btn').forEach((btn) => {
 });
 
 const customState = {
-  hat: { color: '#c54b43', name: 'Rojo navideño' },
-  coat: { color: '#2f6b41', name: 'Verde bosque' },
-  beard: { color: '#ffffff', name: 'Blanca clásica' },
+  hat: { color: '#c54b43', nameEs: 'Rojo navideño', nameEn: 'Christmas red' },
+  coat: { color: '#2f6b41', nameEs: 'Verde bosque', nameEn: 'Forest green' },
+  beard: { color: '#ffffff', nameEs: 'Blanca clásica', nameEn: 'Classic white' },
 };
 const gnomeParts = { hat: ['pvHat'], coat: ['pvCoat', 'pvArmL', 'pvArmR'], beard: ['pvBeard'] };
 function updateOrderSummary() {
   const h = document.getElementById('summaryHat');
   const c = document.getElementById('summaryCoat');
   const b = document.getElementById('summaryBeard');
-  if (h) h.textContent = `🎩 ${customState.hat.name}`;
-  if (c) c.textContent = `🧥 ${customState.coat.name}`;
-  if (b) b.textContent = `🧔 ${customState.beard.name}`;
+  const hatName = currentLang === 'es' ? customState.hat.nameEs : customState.hat.nameEn;
+  const coatName = currentLang === 'es' ? customState.coat.nameEs : customState.coat.nameEn;
+  const beardName = currentLang === 'es' ? customState.beard.nameEs : customState.beard.nameEn;
+  if (h) h.textContent = `🎩 ${hatName}`;
+  if (c) c.textContent = `🧥 ${coatName}`;
+  if (b) b.textContent = `🧔 ${beardName}`;
 }
 function applyColor(part, color) {
   (gnomeParts[part] || []).forEach((id) => {
@@ -235,14 +271,21 @@ document.querySelectorAll('.swatch').forEach((swatch) => {
     const part = swatch.dataset.part;
     document.querySelectorAll(`.swatch[data-part="${part}"]`).forEach((s) => s.classList.remove('swatch-active'));
     swatch.classList.add('swatch-active');
-    customState[part] = { color: swatch.dataset.color, name: swatch.dataset.name };
+    customState[part] = {
+      color: swatch.dataset.color,
+      nameEs: swatch.dataset.nameEs,
+      nameEn: swatch.dataset.nameEn,
+    };
     applyColor(part, swatch.dataset.color);
     updateOrderSummary();
   });
 });
 document.getElementById('orderBtn')?.addEventListener('click', () => {
   const recipient = document.getElementById('recipientName')?.value?.trim();
-  let msg = `Hola Wen! Quiero encargar un Gwenomo personalizado 🎄\n\n🎩 Sombrero: ${customState.hat.name}\n🧥 Cuerpo: ${customState.coat.name}\n🧔 Barba: ${customState.beard.name}`;
+  const hatName = currentLang === 'es' ? customState.hat.nameEs : customState.hat.nameEn;
+  const coatName = currentLang === 'es' ? customState.coat.nameEs : customState.coat.nameEn;
+  const beardName = currentLang === 'es' ? customState.beard.nameEs : customState.beard.nameEn;
+  let msg = `Hola Wen! Quiero encargar un Gwenomo personalizado 🎄\n\n🎩 Sombrero: ${hatName}\n🧥 Cuerpo: ${coatName}\n🧔 Barba: ${beardName}`;
   if (recipient) msg += `\n📝 Es para: ${recipient}`;
   msg += `\n\n¿Cuánto cuesta? ✨`;
   window.open(`https://wa.me/593996259465?text=${encodeURIComponent(msg)}`, '_blank', 'noreferrer');
