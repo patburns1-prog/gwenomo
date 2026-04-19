@@ -17,6 +17,7 @@ const translations = {
     'arrivals.card3.tag': 'Azul invierno', 'arrivals.card3.title': 'Con corazón en mano', 'arrivals.card3.text': 'Ideal para regalar con intención, con una vibra serena y un detalle de corazón que roba miradas.',
     'arrivals.card4.tag': 'Morado', 'arrivals.card4.title': 'Encanto con personalidad', 'arrivals.card4.text': 'Color, textura y ternura en una pieza que se siente original, alegre y perfecta para destacar.',
     'arrivals.card5.tag': 'Músico', 'arrivals.card5.title': 'Serenata navideña', 'arrivals.card5.text': 'Una versión creativa y encantadora para amantes de la música, los detalles y los regalos con historia.',
+    'arrivals.card6.tag': 'Acogedor', 'arrivals.card6.title': 'Cabaña de cacao', 'arrivals.card6.text': 'Una pieza cálida, suave y romántica que transmite hogar, invierno y detalles hechos con cariño.',
     'custom.eyebrow': 'Personaliza tu Gwenomo', 'custom.title': 'Hazlo tan especial como la persona que lo recibe', 'custom.text': 'Colores, profesiones, detalles y combinaciones para crear una pieza con mucha intención.', 'custom.panelTitle': 'Opciones que ya vemos claras',
     'custom.li1': '🎨 Colores diferentes para sombrero, manos y detalles', 'custom.li2': '🩺 Profesiones u oficios personalizados', 'custom.li3': '🎁 Diseños pensados para regalo', 'custom.li4': '✨ Estilos tiernos, elegantes o festivos',
     'interactive.eyebrow': 'Un toque interactivo', 'interactive.title': 'Descubre la energía de tu Gwenomo', 'interactive.text': 'Toca una carta y mira qué personalidad aparece.', 'interactive.card1': 'Protector', 'interactive.card2': 'Regalonero', 'interactive.card3': 'Hogareño', 'interactive.card4': 'Navideño', 'interactive.output': 'Haz clic en una carta para revelar su magia.',
@@ -43,6 +44,7 @@ const translations = {
     'arrivals.card3.tag': 'Winter blue', 'arrivals.card3.title': 'Heart in hand', 'arrivals.card3.text': 'Ideal for heartfelt gifts, with a calm vibe and a heart detail that draws every eye.',
     'arrivals.card4.tag': 'Purple', 'arrivals.card4.title': 'Charm with personality', 'arrivals.card4.text': 'Color, texture, and sweetness in a piece that feels original, cheerful, and made to stand out.',
     'arrivals.card5.tag': 'Musician', 'arrivals.card5.title': 'Christmas serenade', 'arrivals.card5.text': 'A creative, charming version for music lovers and gifts that tell a story.',
+    'arrivals.card6.tag': 'Cozy', 'arrivals.card6.title': 'Cocoa cabin', 'arrivals.card6.text': 'A warm, soft, romantic piece that feels like home, winter, and thoughtful handmade detail.',
     'custom.eyebrow': 'Customize your Gwenomo', 'custom.title': 'Make it as special as the person receiving it', 'custom.text': 'Colors, professions, details, and combinations to create a piece full of intention.', 'custom.panelTitle': 'Options we can already see clearly',
     'custom.li1': '🎨 Different colors for hat, hands, and details', 'custom.li2': '🩺 Personalized professions or trades', 'custom.li3': '🎁 Designs made for gifting', 'custom.li4': '✨ Sweet, elegant, or festive styles',
     'interactive.eyebrow': 'An interactive touch', 'interactive.title': 'Discover your Gwenomo’s energy', 'interactive.text': 'Tap a card and see which personality appears.', 'interactive.card1': 'Protector', 'interactive.card2': 'Gift-giver', 'interactive.card3': 'Homey', 'interactive.card4': 'Christmas spirit', 'interactive.output': 'Click a card to reveal its magic.',
@@ -57,7 +59,8 @@ const productData = {
   'clasico-rojo': { tag: 'Clásico', title: 'Gwenomo rojo', text: 'Una pieza clásica, cálida y navideña para centro de mesa, repisa o regalo memorable.', image: '/assets/classic-red-gnome.jpg', alt: 'Gnomo clásico rojo' },
   'colores-pareja': { tag: 'Colores', title: 'Parejas coloridas', text: 'Versiones vivas y llamativas para decoración alegre y combinaciones personalizadas.', image: '/assets/color-pairs.jpg', alt: 'Gnomos coloridos' },
   'profesiones': { tag: 'Personalización', title: 'Profesiones', text: 'Diseños hechos para representar oficios, historias y regalos con identidad propia.', image: '/assets/custom-professions.jpg', alt: 'Gnomos por profesión' },
-  'stpat': { tag: 'Edición especial', title: 'San Patricio', text: 'Un ejemplo claro de que GWENOMO puede crear versiones temáticas y estacionales con mucho carácter.', image: '/assets/stpat-spanish.jpg', alt: 'Gnomos San Patricio' }
+  'stpat': { tag: 'Edición especial', title: 'San Patricio', text: 'Un ejemplo claro de que GWENOMO puede crear versiones temáticas y estacionales con mucho carácter.', image: '/assets/stpat-spanish.jpg', alt: 'Gnomos San Patricio' },
+  'cocoa-cabin': { tag: 'Acogedor', title: 'Cabaña de cacao', text: 'Un Gwenomo suave y sereno en tonos crema y cacao, con una taza de corazón para transmitir calidez, ternura y hogar.', image: '/assets/cocoa-cabin-heart-mug-gnome.png', alt: 'Gnomo cálido estilo cabaña con taza de corazón' }
 };
 
 let currentLang = localStorage.getItem('gwenomo-lang') || 'es';
@@ -255,6 +258,7 @@ const pageTranslations = {
     'card.colors.title': 'Parejas coloridas', 'card.colors.text': 'Versiones vivas para rincones con personalidad.',
     'card.job.title': 'Profesiones', 'card.job.text': 'Diseños hechos para contar una historia personal.',
     'card.stpat.title': 'San Patricio', 'card.stpat.text': 'Una versión festiva para temporadas especiales.',
+    'card.cocoa.title': 'Cabaña de cacao', 'card.cocoa.text': 'Un Gwenomo sereno y acogedor, en tonos crema y cacao, perfecto para rincones cálidos y regalos con corazón.',
     'order.link': 'Pedir →', 'filter.empty': 'No hay Gwenomos en esa categoría todavía. Pero podemos hacerlo personalizado ✨', 'filter.emptyCta': 'Ir a personalización',
     'custom.eyebrow': 'Personalización', 'custom.title': 'Crea un Gwenomo único', 'custom.text': 'Este espacio ordena las ideas de personalización para que Wendy y sus clientes puedan pensar el pedido con más claridad.',
     'custom.preview': 'Tu Gwenomo personalizado ✨', 'custom.hat': '🎩 Sombrero', 'custom.coat': '🧥 Cuerpo', 'custom.beard': '🧔 Barba', 'custom.forWho': '📝 ¿Para quién es?', 'custom.orderBtn': 'Enviar pedido por WhatsApp',
@@ -269,6 +273,7 @@ const pageTranslations = {
     'card.colors.title': 'Colorful pairs', 'card.colors.text': 'Bright versions for spaces full of personality.',
     'card.job.title': 'Professions', 'card.job.text': 'Designs made to tell a personal story.',
     'card.stpat.title': 'St. Patrick\'s', 'card.stpat.text': 'A festive version for special seasons.',
+    'card.cocoa.title': 'Cocoa cabin', 'card.cocoa.text': 'A serene, cozy Gwenomo in cream and cocoa tones, perfect for warm corners and heartfelt gifts.',
     'order.link': 'Order →', 'filter.empty': 'There are no Gwenomos in that category yet. But we can make it custom ✨', 'filter.emptyCta': 'Go to customization',
     'custom.eyebrow': 'Customization', 'custom.title': 'Create a unique Gwenomo', 'custom.text': 'This space organizes personalization ideas so Wendy and her customers can think through an order more clearly.',
     'custom.preview': 'Your custom Gwenomo ✨', 'custom.hat': '🎩 Hat', 'custom.coat': '🧥 Body', 'custom.beard': '🧔 Beard', 'custom.forWho': '📝 Who is it for?', 'custom.orderBtn': 'Send order on WhatsApp',
